@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        controls = new InputActions;
+       // controls = new InputActions;
     }
 
     void Update()
