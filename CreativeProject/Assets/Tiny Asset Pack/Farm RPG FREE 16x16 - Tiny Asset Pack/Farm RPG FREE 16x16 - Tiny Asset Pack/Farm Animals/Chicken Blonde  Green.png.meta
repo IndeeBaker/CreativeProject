@@ -111,6 +111,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -259,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Chicken Blonde  Green_0: -2825447124637630265
+      Chicken Blonde  Green_1: 9191820586025897299
+      Chicken Blonde  Green_2: -5219821228504833141
+      Chicken Blonde  Green_3: 938706525745832542
+      Chicken Blonde  Green_4: -6065379224185416225
+      Chicken Blonde  Green_5: 8476789600722617127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
