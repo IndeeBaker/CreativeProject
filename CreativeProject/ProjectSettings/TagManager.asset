@@ -44,14 +44,17 @@ TagManager:
   - name: Background
     uniqueID: 3077367383
     locked: 0
+  - name: Player
+    uniqueID: 3897516033
+    locked: 0
   - name: MidGround
     uniqueID: 996942595
     locked: 0
   - name: ForeGround
     uniqueID: 2282988899
     locked: 0
-  - name: Player
-    uniqueID: 3897516033
-    locked: 0
   m_RenderingLayers:
   - Default
+  - Top
+  - Middle
+  - Bottom
