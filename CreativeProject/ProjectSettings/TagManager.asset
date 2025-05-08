@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Mao Border
+  - Ground
+  - Trees
   layers:
   - Default
   - TransparentFX
@@ -44,11 +47,14 @@ TagManager:
   - name: Background
     uniqueID: 3077367383
     locked: 0
+  - name: MidGround
+    uniqueID: 996942595
+    locked: 0
   - name: Player
     uniqueID: 3897516033
     locked: 0
-  - name: MidGround
-    uniqueID: 996942595
+  - name: Items/Props
+    uniqueID: 1031380351
     locked: 0
   - name: ForeGround
     uniqueID: 2282988899

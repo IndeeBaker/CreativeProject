@@ -2,10 +2,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace playerMovement
+namespace playerMovement 
 {
     public class PlayerMovement : MonoBehaviour
-    {
+        {
         public float movementSpeed = 0.5f; //controls how fast the player moves
         public float cameraSmoothFollowSpeed;
         public GameObject menu, map;
