@@ -153,9 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &32870787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -340,9 +339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &70819054 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7875667507651083386, guid: a4884db0a7a0da749a868a939ba12fbe, type: 3}
@@ -377,9 +375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &75936161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: e763c5fe509f9df4d92b9b1bad80d9b2, type: 3}
@@ -414,9 +411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &88751568
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,9 +592,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &99978641 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: d3403dcaf25eb1344aa1040cc541dbee, type: 3}
@@ -633,9 +628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &101168459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -745,9 +739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &123117317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -845,9 +838,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &128828571 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: f3c6b5e48aff0b64fb4b46522751e284, type: 3}
@@ -882,9 +874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &137566579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: e763c5fe509f9df4d92b9b1bad80d9b2, type: 3}
@@ -919,9 +910,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &159873967 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7875667507651083386, guid: a4884db0a7a0da749a868a939ba12fbe, type: 3}
@@ -956,9 +946,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &174557798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1068,9 +1057,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &211057701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: c31ac20805f3cd0409522e94ab04a6f7, type: 3}
@@ -1105,9 +1093,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &227354339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1284,9 +1271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &258648121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: 1eedf87434b209e459fe091fa7b5388a, type: 3}
@@ -1321,9 +1307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &276767328 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: 33cdf1eba6c2f7342ba65bfd37c413b8, type: 3}
@@ -1346,7 +1331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
   sortingLayerName: Default
 --- !u!212 &276767333
@@ -1699,9 +1683,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &362432123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: d3403dcaf25eb1344aa1040cc541dbee, type: 3}
@@ -1736,9 +1719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &366896489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2144,9 +2126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &430712709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2455,9 +2436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &567567616 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7875667507651083386, guid: a4884db0a7a0da749a868a939ba12fbe, type: 3}
@@ -2492,9 +2472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &582027615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: 1eedf87434b209e459fe091fa7b5388a, type: 3}
@@ -2529,9 +2508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &593480962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7875667507651083386, guid: a4884db0a7a0da749a868a939ba12fbe, type: 3}
@@ -2566,9 +2544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &594424326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2678,9 +2655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &606140112 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: d3403dcaf25eb1344aa1040cc541dbee, type: 3}
@@ -2715,9 +2691,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &611733020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2964,9 +2939,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &665694767 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: c31ac20805f3cd0409522e94ab04a6f7, type: 3}
@@ -3001,9 +2975,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &668345335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3192,9 +3165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &711579221
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,9 +3288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &776076279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3500,9 +3471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &809061115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: d3403dcaf25eb1344aa1040cc541dbee, type: 3}
@@ -3537,9 +3507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &816906366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: b0bd556f96a466a42a51037e50017d71, type: 3}
@@ -3562,9 +3531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &841554174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7113,9 +7081,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &895519898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7225,9 +7192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &960042478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7341,9 +7307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &992447853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7532,9 +7497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &1139965172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7799,9 +7763,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &1189619401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7986,9 +7949,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &1245738926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8147,9 +8109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &1406188054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8235,7 +8196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
   sortingLayerName: Default
 --- !u!212 &1420153447
@@ -8515,7 +8475,7 @@ GameObject:
   - component: {fileID: 1455348417}
   m_Layer: 0
   m_Name: Midground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19897,9 +19857,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &1541713551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20009,9 +19968,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &1576997467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20121,9 +20079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &1615703981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20284,7 +20241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
   sortingLayerName: Default
 --- !u!212 &1642941339
@@ -20376,9 +20332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &1666104019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20488,9 +20443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &1709393870
 GameObject:
   m_ObjectHideFlags: 0
@@ -20799,9 +20753,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &1735748136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: c8cc63592d168ac44be9395ea9fae0fe, type: 3}
@@ -20824,9 +20777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &1744092724 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: c31ac20805f3cd0409522e94ab04a6f7, type: 3}
@@ -20861,9 +20813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &1762812943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20973,9 +20924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &1789471186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21517,9 +21467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &1932609577
 GameObject:
   m_ObjectHideFlags: 0
@@ -21533,7 +21482,7 @@ GameObject:
   - component: {fileID: 1932609579}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21596,13 +21545,13 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1217599913
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
-  m_Mode: 1
+  m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
 --- !u!1839735485 &1932609580
@@ -66395,9 +66344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &2004233604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: 33cdf1eba6c2f7342ba65bfd37c413b8, type: 3}
@@ -66420,7 +66368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
   sortingLayerName: Default
 --- !u!212 &2004233609
@@ -66587,9 +66534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &2058729976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66703,9 +66649,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1001 &2079306251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66803,9 +66748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &2102250819 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5165711096306083629, guid: 33cdf1eba6c2f7342ba65bfd37c413b8, type: 3}
@@ -66828,7 +66772,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
   sortingLayerName: Default
 --- !u!212 &2102250824
@@ -66920,9 +66863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702751d12ff89041b5d90dce66ca670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSortingOrder: 1000
   orderOffset: 0
-  sortingLayerName: Default
+  sortingLayerName: Player
 --- !u!1 &2130396510
 GameObject:
   m_ObjectHideFlags: 0
