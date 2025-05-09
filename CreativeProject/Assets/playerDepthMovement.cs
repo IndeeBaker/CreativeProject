@@ -20,7 +20,7 @@ public class PlayerDepthMovement : MonoBehaviour
     {
         sr.sortingOrder = Mathf.RoundToInt(transform.position.y * -100f) + orderOffset;
 
-        // Force correct sorting layer if needed
+        // Force correct sorting layer if needed, this is because unity kept resetting layers to default instead of player
         if (sr.sortingLayerName != sortingLayerName)
             sr.sortingLayerName = sortingLayerName;
     }

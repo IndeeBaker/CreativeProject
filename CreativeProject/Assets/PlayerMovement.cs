@@ -35,8 +35,8 @@ namespace playerMovement
             rb2D.MovePosition(rb2D.position + movement * movementSpeed * Time.fixedDeltaTime);
            // transform.Translate(movement * movementSpeed * Time.deltaTime); //move character based on both inputs and the speed
             Vector3 camPos = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z); //follows player with a delay (lerp)
-            Vector3 playerPos = new Vector3(transform.position.x, transform.position.y, -10f);
-            Camera.main.transform.position = Vector3.Lerp(camPos, playerPos, Time.deltaTime * cameraSmoothFollowSpeed);
+            //Vector3 playerPos = new Vector3(transform.position.x, transform.position.y, -10f);
+            //Camera.main.transform.position = Vector3.Lerp(camPos, playerPos, Time.deltaTime * cameraSmoothFollowSpeed);
         }
 
         private void OnEnable()
