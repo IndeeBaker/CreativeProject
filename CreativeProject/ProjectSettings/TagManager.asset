@@ -50,6 +50,9 @@ TagManager:
   - name: MidGround
     uniqueID: 996942595
     locked: 0
+  - name: TileMap Items
+    uniqueID: 4281656223
+    locked: 0
   - name: Player
     uniqueID: 3897516033
     locked: 0

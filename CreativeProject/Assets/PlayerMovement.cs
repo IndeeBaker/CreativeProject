@@ -1,61 +1,77 @@
+//this script used AI for assistance 
+
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace playerMovement 
+namespace playerMovement
 {
     public class PlayerMovement : MonoBehaviour
-        {
-        public float movementSpeed = 0.5f; //controls how fast the player moves
+    {
+        public float movementSpeed = 0.5f; // Controls how fast the player moves
         public float cameraSmoothFollowSpeed;
         public GameObject menu, map;
-        private InputSystem_Actions inputActions;
-        // Update is called once per frame
 
-        private Rigidbody2D rb2D;//attempting to use rigid body not transform object
-        private void Start()
-        {
-            rb2D = GetComponent<Rigidbody2D>();//rigidbody attempt
-        }
+        private InputSystem_Actions inputActions;
+        private Rigidbody2D rb2D;
+        private Vector2 movementInput; // Stores movement input from player
 
         private void Awake()
         {
-            inputActions = new InputSystem_Actions(); // Initialize the input actions
+            inputActions = new InputSystem_Actions(); // Initialize input actions
             inputActions.UI.Menu.performed += ctx => ToggleMenu();
             inputActions.UI.Map.performed += ctx => ToggleMap();
         }
 
-        void Update()
+        private void Start()
         {
-            float moveX = Input.GetAxis("Horizontal"); //A/D arrows
-            float moveY = Input.GetAxis("Vertical"); //W/S arrows
+            rb2D = GetComponent<Rigidbody2D>(); // Cache the Rigidbody2D
 
-            Vector2 movement = new Vector2(moveX, moveY); //vector2 combines both inputs into one single vector 
+            // DEBUG: Freeze everything to see if physics is the issue
+            //rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
 
-            rb2D.MovePosition(rb2D.position + movement * movementSpeed * Time.fixedDeltaTime);
-           // transform.Translate(movement * movementSpeed * Time.deltaTime); //move character based on both inputs and the speed
-            Vector3 camPos = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z); //follows player with a delay (lerp)
-            //Vector3 playerPos = new Vector3(transform.position.x, transform.position.y, -10f);
-            //Camera.main.transform.position = Vector3.Lerp(camPos, playerPos, Time.deltaTime * cameraSmoothFollowSpeed);
+        private void Update()
+        {
+            // Capture input from old input system
+            float moveX = Input.GetAxisRaw("Horizontal");
+            float moveY = Input.GetAxisRaw("Vertical");
+
+            movementInput = new Vector2(moveX, moveY).normalized; // Normalize to prevent faster diagonal movement
+        }
+
+        private void FixedUpdate()
+        {
+            // Move player using Rigidbody2D physics
+            rb2D.MovePosition(rb2D.position + movementInput * movementSpeed * Time.fixedDeltaTime);
+        }
+
+        private void LateUpdate()
+        {
+            // Smooth camera follow using Lerp
+            Vector3 camPos = Camera.main.transform.position;
+            Vector3 targetPos = new Vector3(transform.position.x, transform.position.y, camPos.z);
+            Camera.main.transform.position = Vector3.Lerp(camPos, targetPos, Time.deltaTime * cameraSmoothFollowSpeed);
         }
 
         private void OnEnable()
         {
-            inputActions.Enable(); // Enable the input actions when the key is enabled
+            inputActions.Enable(); // Enable the input actions
         }
 
         private void OnDisable()
         {
-            inputActions.Disable(); // Disable the input actions when the key is disabled
+            inputActions.Disable(); // Disable the input actions
         }
+
         private void ToggleMenu()
         {
-            menu.SetActive(!menu.activeSelf); //toggles menu game object
+            menu.SetActive(!menu.activeSelf); // Toggles the menu UI
         }
 
         private void ToggleMap()
         {
-            map.SetActive(!map.activeSelf); //toggles map
+            map.SetActive(!map.activeSelf); // Toggles the map UI
         }
     }
 }
