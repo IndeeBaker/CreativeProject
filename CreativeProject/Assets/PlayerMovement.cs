@@ -12,6 +12,12 @@ namespace playerMovement
         private InputSystem_Actions inputActions;
         // Update is called once per frame
 
+        private Rigidbody2D rb2D;//attempting to use rigid body not transform object
+        private void Start()
+        {
+            rb2D = GetComponent<Rigidbody2D>();//rigidbody attempt
+        }
+
         private void Awake()
         {
             inputActions = new InputSystem_Actions(); // Initialize the input actions
@@ -26,7 +32,8 @@ namespace playerMovement
 
             Vector2 movement = new Vector2(moveX, moveY); //vector2 combines both inputs into one single vector 
 
-            transform.Translate(movement * movementSpeed * Time.deltaTime); //move cgaracter based on both inputs and the speed
+            rb2D.MovePosition(rb2D.position + movement * movementSpeed * Time.fixedDeltaTime);
+           // transform.Translate(movement * movementSpeed * Time.deltaTime); //move character based on both inputs and the speed
             Vector3 camPos = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z); //follows player with a delay (lerp)
             Vector3 playerPos = new Vector3(transform.position.x, transform.position.y, -10f);
             Camera.main.transform.position = Vector3.Lerp(camPos, playerPos, Time.deltaTime * cameraSmoothFollowSpeed);
