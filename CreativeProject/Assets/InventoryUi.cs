@@ -11,6 +11,7 @@ public class InventorySlotUI : MonoBehaviour
     private Inventory inventory;
     private Hotbar hotbar;
 
+    [System.Obsolete]
     void Start()
     {
         inventory = FindObjectOfType<Inventory>();

@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class Hotbar : MonoBehaviour
 {
+    //public InventorySlotUI inventorySlotUI; 
     public Inventory inventory;         // Reference to your Inventory script
     public Image[] iconImages;          // UI Images for item icons in hotbar slots
     public Image[] slotBackgrounds;    // UI Images for slot backgrounds (for selection highlight)
+    public Inventory InventoryUi; //?
 
     public int selectedIndex = 0;
     public Color normalColor = Color.white;
