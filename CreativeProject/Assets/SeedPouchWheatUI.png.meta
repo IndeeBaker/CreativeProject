@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SeedPouchWheatUI_0: -3482891182275934389
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

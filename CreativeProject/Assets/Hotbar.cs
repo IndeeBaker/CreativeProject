@@ -10,7 +10,7 @@ public class Hotbar : MonoBehaviour
     public Inventory inventory;         // Reference to your Inventory script
     public Image[] iconImages;          // UI Images for item icons in hotbar slots
     public Image[] slotBackgrounds;    // UI Images for slot backgrounds (for selection highlight)
-    public Inventory InventoryUi; //?
+    public InventoryUI InventoryUi; //?
 
     public int selectedIndex = 0;
     public Color normalColor = Color.white;
@@ -24,10 +24,14 @@ public class Hotbar : MonoBehaviour
         for (int i = 0; i < iconImages.Length; i++)
         {
             if (inventory != null && i < inventory.items.Count)
+            {
                 hotbarItems.Add(inventory.items[i]);
+                inventory.items[i] = null; // Remove from inventory if moved
+            }
             else
                 hotbarItems.Add(null);
         }
+
 
         UpdateHotbarUI();
         UpdateSelection();

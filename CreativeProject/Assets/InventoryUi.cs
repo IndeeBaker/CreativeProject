@@ -3,7 +3,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventorySlotUI : MonoBehaviour
+public class InventoryUI : MonoBehaviour
 {
     public int inventoryIndex; // Set this in the UI
     public Image iconImage;    // Drag the icon child image here
@@ -22,11 +22,15 @@ public class InventorySlotUI : MonoBehaviour
 
     public void OnClick()
     {
+        Debug.Log($"Inventory slot {inventoryIndex} clicked.");
         if (hotbar != null)
         {
-            hotbar.SwapItem(inventoryIndex, hotbar.selectedIndex); // Sends this item to the selected hotbar slot
+            hotbar.SwapItem(inventoryIndex, hotbar.selectedIndex); // Swap the item
+            UpdateSlot(); // Refresh the UI after swap
+            hotbar.UpdateHotbarUI(); // Also refresh hotbar UI
         }
     }
+
 
     public void UpdateSlot()
     {
