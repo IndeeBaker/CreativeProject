@@ -15,7 +15,7 @@ public class changeScene : MonoBehaviour
         if (collision == player)
         {
             Debug.Log("Entered");
-            SceneManager.LoadScene(sceneName: "SampleScene");
+            SceneManager.LoadScene(sceneName: "FarmersHouse");
         }
     }
 

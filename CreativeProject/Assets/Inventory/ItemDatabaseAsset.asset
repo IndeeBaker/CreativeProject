@@ -16,80 +16,48 @@ MonoBehaviour:
   - id: 0
     itemName: Pickaxe
     icon: {fileID: 1495820330137827340, guid: 5c3e68ada24e9824d88dd2af79f3b16e, type: 3}
-    isStackable: 0
-    maxStackSize: 99
   - id: 1
     itemName: Axe
     icon: {fileID: 3888196526821937933, guid: 5e3b5937dc3b75b4a9dc3f9e95afe19b, type: 3}
-    isStackable: 0
-    maxStackSize: 99
   - id: 2
     itemName: Hoe
     icon: {fileID: -996474941520682568, guid: 987c8673fd7f9fd42b64ae35bcce773e, type: 3}
-    isStackable: 0
-    maxStackSize: 99
   - id: 3
     itemName: Watering Can
     icon: {fileID: 4705126722850210633, guid: 04818eede4a368c49aff708b7158b1e4, type: 3}
-    isStackable: 0
-    maxStackSize: 99
   - id: 4
     itemName: Wheat Seeds
     icon: {fileID: -3482891182275934389, guid: 57e9cc0ef97945f468c7adb40d4f298a, type: 3}
-    isStackable: 1
-    maxStackSize: 99
   - id: 5
     itemName: Carrot Seeds
     icon: {fileID: -396096217744191584, guid: aea8212cf43e27a42b73099655bedea3, type: 3}
-    isStackable: 1
-    maxStackSize: 99
   - id: 6
     itemName: Flower Seed
-    icon: {fileID: -3289020868813362532, guid: 720cac786760c6c48b5b668a5e51edc9, type: 3}
-    isStackable: 1
-    maxStackSize: 99
+    icon: {fileID: -8656755583167526932, guid: ef4a249fae2ad2245aa4080332b9e85e, type: 3}
   - id: 7
     itemName: Wool
-    icon: {fileID: -3289020868813362532, guid: 720cac786760c6c48b5b668a5e51edc9, type: 3}
-    isStackable: 1
-    maxStackSize: 99
+    icon: {fileID: -6110089826234408761, guid: 554321cf0184cb447b28387c5a75428e, type: 3}
   - id: 8
     itemName: Milk
-    icon: {fileID: -3289020868813362532, guid: 720cac786760c6c48b5b668a5e51edc9, type: 3}
-    isStackable: 1
-    maxStackSize: 99
+    icon: {fileID: -3599523525966710095, guid: 733540764e0f4f4428b61ef6bfaef928, type: 3}
   - id: 9
     itemName: Egg
-    icon: {fileID: -3289020868813362532, guid: 720cac786760c6c48b5b668a5e51edc9, type: 3}
-    isStackable: 1
-    maxStackSize: 99
+    icon: {fileID: 5704927153012780341, guid: 37f4780556719134a9df7f490afcc8a4, type: 3}
   - id: 10
     itemName: Dinosaur Egg
     icon: {fileID: 4366551636165113372, guid: 64c823837d547c14696461c26a66836f, type: 3}
-    isStackable: 0
-    maxStackSize: 99
   - id: 11
     itemName: Wheat
-    icon: {fileID: -3289020868813362532, guid: 720cac786760c6c48b5b668a5e51edc9, type: 3}
-    isStackable: 1
-    maxStackSize: 99
+    icon: {fileID: 7026743440863518669, guid: f56eb3b5709e0684e80b77d93458a62c, type: 3}
   - id: 12
     itemName: Carrots
-    icon: {fileID: -396096217744191584, guid: aea8212cf43e27a42b73099655bedea3, type: 3}
-    isStackable: 1
-    maxStackSize: 99
+    icon: {fileID: 8260252514105556690, guid: c39debe517b94d34aa8891555fba6c08, type: 3}
   - id: 13
     itemName: Flowers
-    icon: {fileID: -7396494840892519113, guid: 5f74727664b2bd948acdc190ccafc771, type: 3}
-    isStackable: 1
-    maxStackSize: 99
+    icon: {fileID: -9118279197286548304, guid: c49531b48cc8ab446979b91ea1a82037, type: 3}
   - id: 14
     itemName: Wood
     icon: {fileID: -4808768412303917861, guid: 95e9ed03d7868e741a3ee17dd0b76b5d, type: 3}
-    isStackable: 1
-    maxStackSize: 99
   - id: 15
     itemName: Stone
     icon: {fileID: 6606865550531750067, guid: c02c400d2a586094aaf9d5a3ab2cd5ff, type: 3}
-    isStackable: 1
-    maxStackSize: 99
