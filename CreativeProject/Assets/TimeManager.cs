@@ -1,17 +1,16 @@
-// Built using AI for assistance
 using UnityEngine;
 using TMPro;
 
 public class TimeManager : MonoBehaviour
 {
     [Header("Time Display")]
-    public TextMeshProUGUI timeText;    // Drag your TMP Time Text here
-    public TextMeshProUGUI dayText;     // Drag your TMP Day Text here
+    public TextMeshProUGUI timeText;
+    public TextMeshProUGUI dayText;
 
     [Header("Time Settings")]
-    public int startHour = 8;           // Start of day (8 AM)
-    public int endHour = 24;            // End of day (12 AM)
-    public float realSecondsPerGameHour = 18.75f; // 5 minutes per full day
+    public int startHour = 8;
+    public int endHour = 24;
+    public float realSecondsPerGameHour = 18.75f;
 
     private int currentHour;
     private float hourTimer;
@@ -19,9 +18,10 @@ public class TimeManager : MonoBehaviour
     [Header("Day Settings")]
     public int currentDay = 1;
 
-    // Optional event for other systems (e.g., crop growth)
     public delegate void OnNewDay();
     public static event OnNewDay NewDayStarted;
+
+    private bool isSleeping = false;  // Track if player is sleeping
 
     void Start()
     {
@@ -33,8 +33,9 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
-        hourTimer += Time.deltaTime;
+        if (isSleeping) return; // Pause time while sleeping
 
+        hourTimer += Time.deltaTime;
         if (hourTimer >= realSecondsPerGameHour)
         {
             hourTimer -= realSecondsPerGameHour;
@@ -48,7 +49,7 @@ public class TimeManager : MonoBehaviour
 
         if (currentHour >= endHour)
         {
-            PassOut(); // Player didn’t sleep — force next day
+            PassOut();
             return;
         }
 
@@ -72,19 +73,12 @@ public class TimeManager : MonoBehaviour
 
     public void Sleep()
     {
-        Debug.Log("You slept. New day begins.");
-        StartNewDay();
-    }
+        if (isSleeping) return;
 
-    void PassOut()
-    {
-        Debug.Log("You passed out! Waking up tomorrow morning...");
-        // TODO: Show message popup or screen fade here
-        StartNewDay();
-    }
+        isSleeping = true;
+        Debug.Log("Sleeping... Fast forwarding to 8 AM next day");
 
-    public void StartNewDay()
-    {
+        // Fast forward to 8 AM next day
         currentDay++;
         currentHour = startHour;
         hourTimer = 0f;
@@ -92,6 +86,25 @@ public class TimeManager : MonoBehaviour
         UpdateTimeUI();
         UpdateDayUI();
 
-        NewDayStarted?.Invoke(); // Let crops, animals, NPCs know it's a new day
+        // Notify other systems of new day if needed
+        NewDayStarted?.Invoke();
+
+        // End sleep after short delay (simulate sleep duration)
+        StartCoroutine(EndSleepAfterDelay(2f));
+    }
+
+    System.Collections.IEnumerator EndSleepAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isSleeping = false;
+        Debug.Log("Woke up! Good morning!");
+    }
+
+    void PassOut()
+    {
+        Debug.Log("You passed out! Waking up tomorrow morning...");
+        // You can handle player passing out here if they don't sleep
+        // For example, reset time and day or force sleep
+        Sleep();
     }
 }

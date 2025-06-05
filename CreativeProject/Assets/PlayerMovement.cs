@@ -15,6 +15,7 @@ namespace playerMovement
         private InputSystem_Actions inputActions;
         private Rigidbody2D rb2D;
         private Vector2 movementInput; // Stores movement input from player
+        private CameraFreeze cameraFreeze;
 
         private void Awake()
         {
@@ -26,9 +27,10 @@ namespace playerMovement
         private void Start()
         {
             rb2D = GetComponent<Rigidbody2D>(); // Cache the Rigidbody2D
+            cameraFreeze = Camera.main.GetComponent<CameraFreeze>();
 
-            // DEBUG: Freeze everything to see if physics is the issue
-            //rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
+            if (cameraFreeze == null)
+                Debug.LogWarning("CameraFreeze script missing on Main Camera.");
         }
 
         private void Update()
@@ -48,7 +50,12 @@ namespace playerMovement
 
         private void LateUpdate()
         {
-            // Smooth camera follow using Lerp
+            if (cameraFreeze != null && cameraFreeze.IsFrozen)
+            {
+                // Skip camera movement while frozen
+                return;
+            }
+
             Vector3 camPos = Camera.main.transform.position;
             Vector3 targetPos = new Vector3(transform.position.x, transform.position.y, camPos.z);
             Camera.main.transform.position = Vector3.Lerp(camPos, targetPos, Time.deltaTime * cameraSmoothFollowSpeed);
