@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using System.Collections;
 
 public class TimeManager : MonoBehaviour
 {
@@ -18,10 +20,12 @@ public class TimeManager : MonoBehaviour
     [Header("Day Settings")]
     public int currentDay = 1;
 
+    public CanvasGroup fadePanel; // Assign in Inspector
+
+    private bool isSleeping = false;
+
     public delegate void OnNewDay();
     public static event OnNewDay NewDayStarted;
-
-    private bool isSleeping = false;  // Track if player is sleeping
 
     void Start()
     {
@@ -33,7 +37,7 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
-        if (isSleeping) return; // Pause time while sleeping
+        if (isSleeping) return;
 
         hourTimer += Time.deltaTime;
         if (hourTimer >= realSecondsPerGameHour)
@@ -74,37 +78,53 @@ public class TimeManager : MonoBehaviour
     public void Sleep()
     {
         if (isSleeping) return;
+        StartCoroutine(SleepRoutine());
+    }
 
+    IEnumerator SleepRoutine()
+    {
         isSleeping = true;
-        Debug.Log("Sleeping... Fast forwarding to 8 AM next day");
 
-        // Fast forward to 8 AM next day
+        // Fade to black
+        yield return StartCoroutine(FadeScreen(1f));
+
+        // Advance time and day
         currentDay++;
         currentHour = startHour;
         hourTimer = 0f;
-
         UpdateTimeUI();
         UpdateDayUI();
-
-        // Notify other systems of new day if needed
         NewDayStarted?.Invoke();
 
-        // End sleep after short delay (simulate sleep duration)
-        StartCoroutine(EndSleepAfterDelay(2f));
+        // Simulate showing daily summary (later you'll build earnings UI here)
+        Debug.Log("Show daily summary...");
+        yield return new WaitForSeconds(2f); // Placeholder for summary
+
+        // Fade back in
+        yield return StartCoroutine(FadeScreen(0f));
+
+        isSleeping = false;
     }
 
-    System.Collections.IEnumerator EndSleepAfterDelay(float delay)
+    IEnumerator FadeScreen(float targetAlpha)
     {
-        yield return new WaitForSeconds(delay);
-        isSleeping = false;
-        Debug.Log("Woke up! Good morning!");
+        float duration = 1f;
+        float startAlpha = fadePanel.alpha;
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            fadePanel.alpha = Mathf.Lerp(startAlpha, targetAlpha, timer / duration);
+            yield return null;
+        }
+
+        fadePanel.alpha = targetAlpha;
     }
 
     void PassOut()
     {
-        Debug.Log("You passed out! Waking up tomorrow morning...");
-        // You can handle player passing out here if they don't sleep
-        // For example, reset time and day or force sleep
+        Debug.Log("You passed out! Waking up tomorrow...");
         Sleep();
     }
 }
