@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RoaringRanchItems-7.png_0: 5704927153012780341
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,8 +6,9 @@ public class ItemData
     public int id;
     public string itemName;
     public Sprite icon;
-    public int price;  // Add price here
+    public int price;
 }
+
 
 [CreateAssetMenu(fileName = "ItemDatabase", menuName = "Inventory/Item Database")]
 public class ItemDatabase : ScriptableObject
