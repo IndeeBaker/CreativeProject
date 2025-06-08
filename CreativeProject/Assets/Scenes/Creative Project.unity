@@ -42988,7 +42988,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1038451044}
   m_HandleRect: {fileID: 1038451043}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -90039,9 +90039,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -203.86
       objectReference: {fileID: 0}
+    - target: {fileID: 1182043305807783950, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1291974631619959139, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -203.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372577900828406046, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2294332154346612044, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_LocalScale.x
@@ -90055,6 +90063,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0588051
       objectReference: {fileID: 0}
+    - target: {fileID: 2832898534087291969, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122860626948557509, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3660063396477600085, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -90066,6 +90082,10 @@ PrefabInstance:
     - target: {fileID: 3960856791042327227, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -203.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998836167302624214, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4473503468215347578, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -90095,6 +90115,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5481614484056405911, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649488150867487701, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5682873567111105514, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -298
@@ -90114,6 +90142,10 @@ PrefabInstance:
     - target: {fileID: 6751895065970762568, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023579204739493095, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7485969695712369146, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -90211,9 +90243,17 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7973744724020993460, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8176608712480108849, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -298
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269016709636556589, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8324978162426385415, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_Color.a
@@ -90241,6 +90281,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9054238264323250462, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
       propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174698539322523094, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}
+      propertyPath: isHotbar
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9175653715264027688, guid: 0c50db4d0efa22243b1aba0be3e7e3fc, type: 3}

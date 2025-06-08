@@ -16,6 +16,22 @@ public class ItemSlotUI : MonoBehaviour
         itemId = newItemId;
         quantity = newQuantity;
 
+        if (icon == null)
+        {
+            Debug.LogError($"Icon Image is not assigned on {gameObject.name}");
+            return;
+        }
+        if (stack == null)
+        {
+            Debug.LogError($"Stack Text is not assigned on {gameObject.name}");
+            return;
+        }
+        if (itemDatabase == null)
+        {
+            Debug.LogError($"ItemDatabase is not assigned on {gameObject.name}");
+            return;
+        }
+
         if (itemId == -1 || quantity <= 0)
         {
             // Clear slot visuals
@@ -34,7 +50,7 @@ public class ItemSlotUI : MonoBehaviour
             }
             else
             {
-                // Item data missing, clear visuals
+                Debug.LogError($"ItemData not found for ID {itemId} on {gameObject.name}");
                 icon.sprite = null;
                 icon.color = new Color(1, 1, 1, 0);
                 stack.text = "";

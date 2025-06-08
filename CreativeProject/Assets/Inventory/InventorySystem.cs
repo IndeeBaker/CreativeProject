@@ -154,19 +154,31 @@ public class InventorySystem : MonoBehaviour
         return false;
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
-        // Update inventory UI slots
+        // Update inventory UI slots with debug checks
         for (int i = 0; i < inventorySlots.Count; i++)
         {
+            if (inventorySlots[i] == null)
+            {
+                Debug.LogError($"Inventory slot at index {i} is null! Please assign it in the Inspector.");
+                continue;
+            }
+
             int id = (i < inventory.Count) ? inventory[i] : -1;
             int qty = (i < inventoryQuantities.Count) ? inventoryQuantities[i] : 0;
             inventorySlots[i].SetItem(id, qty);
         }
 
-        // Update hotbar UI slots
+        // Update hotbar UI slots with debug checks
         for (int i = 0; i < hotbarSlots.Count; i++)
         {
+            if (hotbarSlots[i] == null)
+            {
+                Debug.LogError($"Hotbar slot at index {i} is null! Please assign it in the Inspector.");
+                continue;
+            }
+
             int id = (i < hotbar.Count) ? hotbar[i] : -1;
             int qty = (i < hotbarQuantities.Count) ? hotbarQuantities[i] : 0;
             hotbarSlots[i].SetItem(id, qty);
