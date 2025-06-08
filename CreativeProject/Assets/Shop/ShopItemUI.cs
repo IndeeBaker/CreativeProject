@@ -13,21 +13,24 @@ public class ShopItemUI : MonoBehaviour
     public ItemDatabase itemDatabase;
     public ItemDatabase.ItemData itemData;
 
+    private float lastBuyTime = 0f;
+    private float buyCooldown = 0.5f; // Half a second cooldown to prevent double buy
+
     private void Awake()
     {
         itemData = itemDatabase.GetItemById(IDNumber);
-    }
-
-    private void Start()
-    {
-        if (itemData != null)
-            Setup(itemData);
 
         if (buyButton != null)
         {
             buyButton.onClick.RemoveAllListeners();
             buyButton.onClick.AddListener(OnBuyClicked);
         }
+    }
+
+    private void Start()
+    {
+        if (itemData != null)
+            Setup(itemData);
     }
 
     public void Setup(ItemDatabase.ItemData data)
@@ -42,6 +45,11 @@ public class ShopItemUI : MonoBehaviour
 
     public void OnBuyClicked()
     {
+        if (Time.time - lastBuyTime < buyCooldown)
+            return; // Ignore if clicked too soon after last click
+
+        lastBuyTime = Time.time;
+
         if (itemData != null)
         {
             bool added = InventorySystem.Instance.AddItem(itemData.id, 1);
