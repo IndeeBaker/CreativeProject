@@ -139,8 +139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 55923481521971777}
+  stack: {fileID: 5390747678625855280}
   itemId: -1
-  itemDatabase: {fileID: 0}
+  quantity: 0
 --- !u!225 &1125358334774155151
 CanvasGroup:
   m_ObjectHideFlags: 0

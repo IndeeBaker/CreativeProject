@@ -1,28 +1,22 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class ItemData
+public class ItemDatabase : MonoBehaviour
 {
-    public int id;
-    public string itemName;
-    public Sprite icon;
-    public int price;
-}
+    [System.Serializable]
+    public class ItemData
+    {
+        public int id;
+        public string itemName;
+        public Sprite icon;
+        public int price;
+        public int maxStack = 99;
+    }
 
+    public List<ItemData> items = new List<ItemData>();
 
-[CreateAssetMenu(fileName = "ItemDatabase", menuName = "Inventory/Item Database")]
-public class ItemDatabase : ScriptableObject
-{
-    public ItemData[] items;
-
-    // Returns the item with matching id or null if not found
     public ItemData GetItemById(int id)
     {
-        foreach (var item in items)
-        {
-            if (item.id == id)
-                return item;
-        }
-        return null;
+        return items.Find(item => item.id == id);
     }
 }

@@ -1,83 +1,44 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using TMPro;
 
-public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ItemSlotUI : MonoBehaviour
 {
     public Image icon;
+    public TMP_Text stack;  // The UI text showing quantity
     public int itemId = -1;
+    public int quantity = 0;
+
     public ItemDatabase itemDatabase;
 
-    private Canvas canvas;
-    private GameObject dragIconObj;
-    private RectTransform dragIconRect;
-
-    void Awake()
+    public void SetItem(int newItemId, int newQuantity)
     {
-        canvas = GetComponentInParent<Canvas>();
-    }
+        itemId = newItemId;
+        quantity = newQuantity;
 
-    public void SetItem(int id)
-    {
-        itemId = id;
-
-        if (id >= 0)
+        if (itemId == -1 || quantity <= 0)
         {
-            ItemData data = itemDatabase.GetItemById(id);
-            icon.sprite = data.icon;
-            icon.color = Color.white;
+            // Clear slot visuals
+            icon.sprite = null;
+            icon.color = new Color(1, 1, 1, 0);  // Transparent
+            stack.text = "";
         }
         else
         {
-            icon.sprite = null;
-            icon.color = new Color(1, 1, 1, 0);
+            var data = itemDatabase.GetItemById(itemId);
+            if (data != null)
+            {
+                icon.sprite = data.icon;
+                icon.color = Color.white;
+                stack.text = quantity > 1 ? quantity.ToString() : "";
+            }
+            else
+            {
+                // Item data missing, clear visuals
+                icon.sprite = null;
+                icon.color = new Color(1, 1, 1, 0);
+                stack.text = "";
+            }
         }
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        if (itemId < 0) return;
-
-        dragIconObj = new GameObject("DraggingItemIcon");
-        dragIconObj.transform.SetParent(canvas.transform, false);
-        dragIconRect = dragIconObj.AddComponent<RectTransform>();
-        dragIconRect.sizeDelta = icon.rectTransform.sizeDelta;
-
-        Image dragImage = dragIconObj.AddComponent<Image>();
-        dragImage.sprite = icon.sprite;
-        dragImage.raycastTarget = false;
-
-        UpdateDragPosition(eventData);
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        if (dragIconObj != null)
-            UpdateDragPosition(eventData);
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        if (dragIconObj != null)
-            Destroy(dragIconObj);
-
-        var nearest = InventoryManager.Instance.GetNearestSlot(eventData.position);
-        if (nearest != null && nearest != this)
-        {
-            int temp = nearest.itemId;
-            nearest.SetItem(this.itemId);
-            this.SetItem(temp);
-        }
-    }
-
-    void UpdateDragPosition(PointerEventData eventData)
-    {
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            canvas.transform as RectTransform,
-            eventData.position,
-            canvas.worldCamera,
-            out Vector2 localPoint);
-
-        dragIconRect.localPosition = localPoint;
     }
 }
