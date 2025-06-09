@@ -1,7 +1,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDatabase : MonoBehaviour
+public enum ItemType
+{
+    None,
+    Pickaxe,
+    Axe,
+    Hoe,
+    WateringCan,
+    Seeds,
+    Consumable,
+    Tool,
+    Furniture,
+    NPC,
+    Resource
+}
+
+[CreateAssetMenu(fileName = "ItemDatabase", menuName = "Inventory/Item Database")]
+public class ItemDatabase : ScriptableObject
 {
     [System.Serializable]
     public class ItemData
@@ -10,7 +26,8 @@ public class ItemDatabase : MonoBehaviour
         public string itemName;
         public Sprite icon;
         public int price;
-        public int maxStack = 99;
+        public int maxStack;
+        public ItemType itemType; // <-- NEW: item type for gameplay logic
     }
 
     public List<ItemData> items = new List<ItemData>();
@@ -18,5 +35,10 @@ public class ItemDatabase : MonoBehaviour
     public ItemData GetItemById(int id)
     {
         return items.Find(item => item.id == id);
+    }
+
+    public ItemData GetItemByName(string name)
+    {
+        return items.Find(item => item.itemName == name);
     }
 }
