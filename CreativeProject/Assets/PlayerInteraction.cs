@@ -164,6 +164,7 @@ public class PlayerInteraction : MonoBehaviour
             Instantiate(prefabToPlant, spawnPos, Quaternion.identity);
             Debug.Log($"Planted {seedItem.itemName} at {tilePos}");
 
+            InventorySystem.Instance.ConsumeSelectedHotbarItem(1);
             // InventorySystem.Instance.RemoveItem(seedItem.id, 1);
         }
     }
