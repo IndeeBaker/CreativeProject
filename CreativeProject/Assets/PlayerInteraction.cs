@@ -9,6 +9,8 @@ public class PlayerInteraction : MonoBehaviour
     // Step 1: Add references for soil tilemap and tilled soil tile
     public Tilemap soilTilemap;
     public TileBase tilledSoilTile;
+    public GameObject tilledSoilPrefab;
+
 
     void Update()
     {
@@ -28,35 +30,31 @@ public class PlayerInteraction : MonoBehaviour
             return;
         }
 
-        // Raycast forward (adjust direction if needed)
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, interactRange, interactLayerMask);
+        // Overlap circle centered at player (adjust offset if needed)
+        Vector2 center = (Vector2)transform.position + (Vector2)transform.right;
+        Collider2D hit = Physics2D.OverlapCircle(center, interactRange, interactLayerMask);
 
-        if (hit.collider != null)
+        if (hit != null)
         {
-            Debug.Log($"Interacting with {hit.collider.name} using {selectedItem.itemName} ({selectedItem.itemType})");
+            Debug.Log($"Interacting with {hit.name} using {selectedItem.itemName} ({selectedItem.itemType})");
 
             switch (selectedItem.itemType)
             {
                 case ItemType.Pickaxe:
-                    UsePickaxe(hit.collider.gameObject);
+                    UsePickaxe(hit.gameObject);
                     break;
-
                 case ItemType.Axe:
-                    UseAxe(hit.collider.gameObject);
+                    UseAxe(hit.gameObject);
                     break;
-
                 case ItemType.Hoe:
-                    UseHoe(hit.collider.gameObject);
+                    UseHoe(hit.gameObject);
                     break;
-
                 case ItemType.WateringCan:
-                    UseWateringCan(hit.collider.gameObject);
+                    UseWateringCan(hit.gameObject);
                     break;
-
                 case ItemType.Seeds:
-                    PlantSeed(hit.collider.gameObject, selectedItem);
+                    PlantSeed(hit.gameObject, selectedItem);
                     break;
-
                 default:
                     Debug.Log("Item type not usable for interaction.");
                     break;
@@ -67,6 +65,7 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log("Nothing interactable in range.");
         }
     }
+
 
     void UsePickaxe(GameObject target)
     {
@@ -82,9 +81,25 @@ public class PlayerInteraction : MonoBehaviour
 
     void UseHoe(GameObject target)
     {
-        Debug.Log("Tilling soil: " + target.name);
-        // TODO: tilling logic will go here in next step
+        Debug.Log("Tilling soil with hoe");
+
+        Vector3 worldPos = transform.position + transform.right * 0.5f; // In front of player
+        Vector3Int cellPos = soilTilemap.WorldToCell(worldPos);        // Snap to tile grid
+        TileBase existingTile = soilTilemap.GetTile(cellPos);
+
+        if (existingTile != null && existingTile != tilledSoilTile)
+        {
+            soilTilemap.SetTile(cellPos, tilledSoilTile);
+            Debug.Log($"Tilled soil at {cellPos}");
+        }
+        else
+        {
+            Debug.Log("Tile already tilled or no tile present.");
+        }
     }
+
+
+
 
     void UseWateringCan(GameObject target)
     {
