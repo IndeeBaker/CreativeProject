@@ -13,8 +13,7 @@ public class ShopItemUI : MonoBehaviour
     public ItemDatabase itemDatabase;
     public ItemDatabase.ItemData itemData;
 
-    private float lastBuyTime = 0f;
-    private float buyCooldown = 0.5f; // Half a second cooldown to prevent double buy
+    private bool buyInProgress = false;
 
     private void Awake()
     {
@@ -45,23 +44,37 @@ public class ShopItemUI : MonoBehaviour
 
     public void OnBuyClicked()
     {
-        if (Time.time - lastBuyTime < buyCooldown)
-            return; // Ignore if clicked too soon after last click
+        if (buyInProgress) return; // Prevent double buy in same frame
+        buyInProgress = true;
+        StartCoroutine(ResetBuyFlag());
 
-        lastBuyTime = Time.time;
+        if (itemData == null)
+            return;
 
-        if (itemData != null)
+        int price = itemData.price;
+
+        if (PlayerWallet.Instance.TrySpendMoney(price))
         {
             bool added = InventorySystem.Instance.AddItem(itemData.id, 1);
             if (added)
             {
-                Debug.Log($"Bought 1 {itemData.itemName}");
-                // TODO: Deduct player money here
+                Debug.Log($"Bought 1 {itemData.itemName} for ${price}");
             }
             else
             {
-                Debug.LogWarning("Inventory full, cannot buy item.");
+                Debug.LogWarning("Inventory full, refunding money.");
+                PlayerWallet.Instance.AddMoney(price); // Refund
             }
         }
+        else
+        {
+            Debug.LogWarning("Not enough money to buy this item.");
+        }
+    }
+
+    private System.Collections.IEnumerator ResetBuyFlag()
+    {
+        yield return null; // Wait one frame
+        buyInProgress = false;
     }
 }
