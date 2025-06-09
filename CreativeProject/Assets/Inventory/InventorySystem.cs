@@ -242,6 +242,8 @@ public class InventorySystem : MonoBehaviour
     // === NEW: Main Remove Method ===
     public bool RemoveItem(int itemId, int quantityToRemove)
     {
+        Debug.Log($"[RemoveItem] Called for itemId={itemId} qty={quantityToRemove}");
+
         int quantityLeft = quantityToRemove;
 
         TryRemoveFromInventory(itemId, ref quantityLeft);

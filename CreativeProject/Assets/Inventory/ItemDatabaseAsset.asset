@@ -127,28 +127,28 @@ MonoBehaviour:
     plantPrefab: {fileID: 0}
   - id: 16
     itemName: Cow
-    icon: {fileID: 6606865550531750067, guid: c02c400d2a586094aaf9d5a3ab2cd5ff, type: 3}
+    icon: {fileID: -3576165310463019188, guid: 1ff7180d0acf22d41a31f6e9ee7ec8df, type: 3}
     price: 10
     maxStack: 99
     itemType: 9
     plantPrefab: {fileID: 0}
   - id: 17
     itemName: Sheep
-    icon: {fileID: 6606865550531750067, guid: c02c400d2a586094aaf9d5a3ab2cd5ff, type: 3}
+    icon: {fileID: -7071734084718998226, guid: 12feb46932545bf498473c11bef30bd3, type: 3}
     price: 10
     maxStack: 99
     itemType: 9
     plantPrefab: {fileID: 0}
   - id: 18
     itemName: Chicken
-    icon: {fileID: 6606865550531750067, guid: c02c400d2a586094aaf9d5a3ab2cd5ff, type: 3}
+    icon: {fileID: -8714301849626275311, guid: eab3363c20a29c8489fd6333958cd8e0, type: 3}
     price: 10
     maxStack: 99
     itemType: 0
     plantPrefab: {fileID: 0}
   - id: 19
     itemName: Dinosaur
-    icon: {fileID: 6606865550531750067, guid: c02c400d2a586094aaf9d5a3ab2cd5ff, type: 3}
+    icon: {fileID: -8261122725574191275, guid: 10e042ab3628a4e47b94816314b81499, type: 3}
     price: 20
     maxStack: 99
     itemType: 0

@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using static UnityEditor.Progress;
 
 public class ShopItemUI : MonoBehaviour
 {
@@ -15,7 +14,7 @@ public class ShopItemUI : MonoBehaviour
     public ItemDatabase.ItemData itemData;
 
     private bool buyInProgress = false;
-    private bool sellInProgress = false; 
+    private bool sellInProgress = false;
 
     private void Awake()
     {
@@ -46,7 +45,7 @@ public class ShopItemUI : MonoBehaviour
 
     public void OnBuyClicked()
     {
-        if (buyInProgress) return; // Prevent double buy in same frame
+        if (buyInProgress) return;
         buyInProgress = true;
         StartCoroutine(ResetBuyFlag());
 
@@ -65,7 +64,7 @@ public class ShopItemUI : MonoBehaviour
             else
             {
                 Debug.LogWarning("Inventory full, refunding money.");
-                PlayerWallet.Instance.AddMoney(price); // Refund
+                PlayerWallet.Instance.AddMoney(price);
             }
         }
         else
@@ -73,21 +72,20 @@ public class ShopItemUI : MonoBehaviour
             Debug.LogWarning("Not enough money to buy this item.");
         }
     }
+
     public void OnSellClicked()
     {
-        if (sellInProgress) return; // Prevent double sell in same frame
+        if (sellInProgress) return;
         sellInProgress = true;
         StartCoroutine(ResetSellFlag());
 
         if (itemData == null)
             return;
 
-        int sellPrice = itemData.price; // Assuming you have a sellPrice field
+        int sellPrice = itemData.price;
 
-        InventorySystem.Instance.RemoveItem(itemData.id, 1);
-
-        // Check if player has the item to sell
         bool removed = InventorySystem.Instance.RemoveItem(itemData.id, 1);
+
         if (removed)
         {
             PlayerWallet.Instance.AddMoney(sellPrice);
@@ -99,17 +97,15 @@ public class ShopItemUI : MonoBehaviour
         }
     }
 
-    // Coroutine to reset sellInProgress flag
+    private System.Collections.IEnumerator ResetBuyFlag()
+    {
+        yield return null;
+        buyInProgress = false;
+    }
+
     private System.Collections.IEnumerator ResetSellFlag()
     {
         yield return null;
         sellInProgress = false;
-    }
-
-
-    private System.Collections.IEnumerator ResetBuyFlag()
-    {
-        yield return null; // Wait one frame
-        buyInProgress = false;
     }
 }
