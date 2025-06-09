@@ -14,23 +14,19 @@ public class InventorySystem : MonoBehaviour
     public List<ItemSlotUI> inventorySlots;
     public List<ItemSlotUI> hotbarSlots;
 
-    public GameObject[] selected; // For hotbar item visuals
-
+    public GameObject[] selected;
     public ItemDatabase itemDatabase;
-
     public int selectedHotbarIndex = 0;
 
     void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     void Start()
     {
-        int inventorySize = 10;  // Set your inventory size here
+        int inventorySize = 10;
         int hotbarSize = 10;
 
         inventory.Clear();
@@ -38,24 +34,22 @@ public class InventorySystem : MonoBehaviour
         hotbar.Clear();
         hotbarQuantities.Clear();
 
-        // Initialize inventory slots with empty (-1) and zero quantity
         for (int i = 0; i < inventorySize; i++)
         {
             inventory.Add(-1);
             inventoryQuantities.Add(0);
         }
 
-        // Initialize hotbar slots - example: first 4 items set, rest empty
         hotbar = new List<int> { 0, 1, 2, 3, -1, -1, -1, -1, -1, -1 };
         hotbarQuantities = new List<int> { 1, 1, 1, 1, 0, 0, 0, 0, 0, 0 };
 
-        // Assign slot indexes and hotbar flags to slots (IMPORTANT)
         for (int i = 0; i < inventorySlots.Count; i++)
         {
             inventorySlots[i].slotIndex = i;
             inventorySlots[i].isHotbarSlot = false;
             inventorySlots[i].itemDatabase = itemDatabase;
         }
+
         for (int i = 0; i < hotbarSlots.Count; i++)
         {
             hotbarSlots[i].slotIndex = i;
@@ -63,10 +57,7 @@ public class InventorySystem : MonoBehaviour
             hotbarSlots[i].itemDatabase = itemDatabase;
         }
 
-        // Update all UI slots at start
         UpdateUI();
-
-        // Select first hotbar slot by default
         SelectHotbar(0);
     }
 
@@ -77,16 +68,16 @@ public class InventorySystem : MonoBehaviour
 
     void HandleHotbarInput()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) { selectedHotbarIndex = 0; SelectHotbar(0); }
-        else if (Input.GetKeyDown(KeyCode.Alpha2)) { selectedHotbarIndex = 1; SelectHotbar(1); }
-        else if (Input.GetKeyDown(KeyCode.Alpha3)) { selectedHotbarIndex = 2; SelectHotbar(2); }
-        else if (Input.GetKeyDown(KeyCode.Alpha4)) { selectedHotbarIndex = 3; SelectHotbar(3); }
-        else if (Input.GetKeyDown(KeyCode.Alpha5)) { selectedHotbarIndex = 4; SelectHotbar(4); }
-        else if (Input.GetKeyDown(KeyCode.Alpha6)) { selectedHotbarIndex = 5; SelectHotbar(5); }
-        else if (Input.GetKeyDown(KeyCode.Alpha7)) { selectedHotbarIndex = 6; SelectHotbar(6); }
-        else if (Input.GetKeyDown(KeyCode.Alpha8)) { selectedHotbarIndex = 7; SelectHotbar(7); }
-        else if (Input.GetKeyDown(KeyCode.Alpha9)) { selectedHotbarIndex = 8; SelectHotbar(8); }
-        else if (Input.GetKeyDown(KeyCode.Alpha0)) { selectedHotbarIndex = 9; SelectHotbar(9); }
+        if (Input.GetKeyDown(KeyCode.Alpha1)) { SelectHotbar(0); }
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) { SelectHotbar(1); }
+        else if (Input.GetKeyDown(KeyCode.Alpha3)) { SelectHotbar(2); }
+        else if (Input.GetKeyDown(KeyCode.Alpha4)) { SelectHotbar(3); }
+        else if (Input.GetKeyDown(KeyCode.Alpha5)) { SelectHotbar(4); }
+        else if (Input.GetKeyDown(KeyCode.Alpha6)) { SelectHotbar(5); }
+        else if (Input.GetKeyDown(KeyCode.Alpha7)) { SelectHotbar(6); }
+        else if (Input.GetKeyDown(KeyCode.Alpha8)) { SelectHotbar(7); }
+        else if (Input.GetKeyDown(KeyCode.Alpha9)) { SelectHotbar(8); }
+        else if (Input.GetKeyDown(KeyCode.Alpha0)) { SelectHotbar(9); }
     }
 
     public int GetHeldItemId()
@@ -104,22 +95,13 @@ public class InventorySystem : MonoBehaviour
 
     public bool AddItem(int itemId, int quantityToAdd)
     {
-        if (itemId < 0)
-        {
-            Debug.LogWarning("AddItem called with invalid itemId: " + itemId);
-            return false;
-        }
+        if (itemId < 0) return false;
 
         var itemData = itemDatabase.GetItemById(itemId);
-        if (itemData == null)
-        {
-            Debug.LogWarning("AddItem called with unknown itemId: " + itemId);
-            return false;
-        }
+        if (itemData == null) return false;
 
         int maxStack = itemData.maxStack;
 
-        // Stack into existing inventory slots
         for (int i = 0; i < inventory.Count; i++)
         {
             if (inventory[i] == itemId && inventoryQuantities[i] < maxStack)
@@ -128,18 +110,11 @@ public class InventorySystem : MonoBehaviour
                 int addAmount = Mathf.Min(spaceLeft, quantityToAdd);
                 inventoryQuantities[i] += addAmount;
                 quantityToAdd -= addAmount;
-
                 inventorySlots[i].SetItem(inventory[i], inventoryQuantities[i]);
-
-                if (quantityToAdd <= 0)
-                {
-                    UpdateUI();
-                    return true;
-                }
+                if (quantityToAdd <= 0) { UpdateUI(); return true; }
             }
         }
 
-        // Add to empty inventory slots
         for (int i = 0; i < inventory.Count; i++)
         {
             if (inventory[i] == -1)
@@ -148,36 +123,24 @@ public class InventorySystem : MonoBehaviour
                 inventory[i] = itemId;
                 inventoryQuantities[i] = addAmount;
                 quantityToAdd -= addAmount;
-
                 inventorySlots[i].SetItem(inventory[i], inventoryQuantities[i]);
-
-                if (quantityToAdd <= 0)
-                {
-                    UpdateUI();
-                    return true;
-                }
+                if (quantityToAdd <= 0) { UpdateUI(); return true; }
             }
         }
 
-        // No space left
-        Debug.LogWarning("Inventory full or not enough space to add all items.");
         UpdateUI();
         return false;
     }
 
-    // Add item to hotbar with stacking
     public bool AddItemToHotbar(int itemId, int quantityToAdd)
     {
-        if (itemId < 0)
-            return false;
+        if (itemId < 0) return false;
 
         var itemData = itemDatabase.GetItemById(itemId);
-        if (itemData == null)
-            return false;
+        if (itemData == null) return false;
 
         int maxStack = itemData.maxStack;
 
-        // Stack into existing hotbar slots
         for (int i = 0; i < hotbar.Count; i++)
         {
             if (hotbar[i] == itemId && hotbarQuantities[i] < maxStack)
@@ -186,18 +149,11 @@ public class InventorySystem : MonoBehaviour
                 int addAmount = Mathf.Min(spaceLeft, quantityToAdd);
                 hotbarQuantities[i] += addAmount;
                 quantityToAdd -= addAmount;
-
                 hotbarSlots[i].SetItem(hotbar[i], hotbarQuantities[i]);
-
-                if (quantityToAdd <= 0)
-                {
-                    UpdateUI();
-                    return true;
-                }
+                if (quantityToAdd <= 0) { UpdateUI(); return true; }
             }
         }
 
-        // Add to empty hotbar slots
         for (int i = 0; i < hotbar.Count; i++)
         {
             if (hotbar[i] == -1)
@@ -206,50 +162,28 @@ public class InventorySystem : MonoBehaviour
                 hotbar[i] = itemId;
                 hotbarQuantities[i] = addAmount;
                 quantityToAdd -= addAmount;
-
                 hotbarSlots[i].SetItem(hotbar[i], hotbarQuantities[i]);
-
-                if (quantityToAdd <= 0)
-                {
-                    UpdateUI();
-                    return true;
-                }
+                if (quantityToAdd <= 0) { UpdateUI(); return true; }
             }
         }
 
-        // No space left
-        Debug.LogWarning("Hotbar full or not enough space to add all items.");
         UpdateUI();
         return false;
     }
 
     public void UpdateUI()
     {
-        // Update inventory UI slots
         for (int i = 0; i < inventorySlots.Count; i++)
         {
-            if (inventorySlots[i] == null)
-            {
-                Debug.LogError($"Inventory slot at index {i} is null! Please assign it in the Inspector.");
-                continue;
-            }
-
-            int id = (i < inventory.Count) ? inventory[i] : -1;
-            int qty = (i < inventoryQuantities.Count) ? inventoryQuantities[i] : 0;
+            int id = i < inventory.Count ? inventory[i] : -1;
+            int qty = i < inventoryQuantities.Count ? inventoryQuantities[i] : 0;
             inventorySlots[i].SetItem(id, qty);
         }
 
-        // Update hotbar UI slots
         for (int i = 0; i < hotbarSlots.Count; i++)
         {
-            if (hotbarSlots[i] == null)
-            {
-                Debug.LogError($"Hotbar slot at index {i} is null! Please assign it in the Inspector.");
-                continue;
-            }
-
-            int id = (i < hotbar.Count) ? hotbar[i] : -1;
-            int qty = (i < hotbarQuantities.Count) ? hotbarQuantities[i] : 0;
+            int id = i < hotbar.Count ? hotbar[i] : -1;
+            int qty = i < hotbarQuantities.Count ? hotbarQuantities[i] : 0;
             hotbarSlots[i].SetItem(id, qty);
         }
     }
@@ -257,25 +191,19 @@ public class InventorySystem : MonoBehaviour
     void SelectHotbar(int index)
     {
         selectedHotbarIndex = index;
-
         for (int i = 0; i < selected.Length; i++)
-        {
             selected[i].SetActive(i == index);
-        }
-
         UpdateUI();
     }
 
     public void SwapItems(ItemSlotUI slotA, ItemSlotUI slotB)
     {
-        // Get current data from the slots' lists
         int idA = slotA.isHotbarSlot ? hotbar[slotA.slotIndex] : inventory[slotA.slotIndex];
         int qtyA = slotA.isHotbarSlot ? hotbarQuantities[slotA.slotIndex] : inventoryQuantities[slotA.slotIndex];
 
         int idB = slotB.isHotbarSlot ? hotbar[slotB.slotIndex] : inventory[slotB.slotIndex];
         int qtyB = slotB.isHotbarSlot ? hotbarQuantities[slotB.slotIndex] : inventoryQuantities[slotB.slotIndex];
 
-        // Swap the data
         if (slotA.isHotbarSlot)
         {
             hotbar[slotA.slotIndex] = idB;
@@ -301,23 +229,74 @@ public class InventorySystem : MonoBehaviour
         UpdateUI();
     }
 
-    // Consume an item from the currently selected hotbar slot
     public void ConsumeSelectedHotbarItem(int amount = 1)
     {
         int index = selectedHotbarIndex;
-        if (index < 0 || index >= hotbar.Count)
-            return;
+        if (index < 0 || index >= hotbar.Count) return;
+        if (hotbar[index] == -1) return;
 
-        if (hotbar[index] == -1)
-            return; // No item here
+        RemoveFromSlot(true, index, amount);
+        UpdateUI();
+    }
 
-        hotbarQuantities[index] -= amount;
-        if (hotbarQuantities[index] <= 0)
-        {
-            hotbarQuantities[index] = 0;
-            hotbar[index] = -1; // Clear slot if none left
-        }
+    // === NEW: Main Remove Method ===
+    public bool RemoveItem(int itemId, int quantityToRemove)
+    {
+        int quantityLeft = quantityToRemove;
+
+        TryRemoveFromInventory(itemId, ref quantityLeft);
+        if (quantityLeft > 0)
+            TryRemoveFromHotbar(itemId, ref quantityLeft);
 
         UpdateUI();
+        return quantityLeft <= 0;
+    }
+
+    void TryRemoveFromInventory(int itemId, ref int quantityLeft)
+    {
+        for (int i = 0; i < inventory.Count && quantityLeft > 0; i++)
+        {
+            if (inventory[i] == itemId && inventoryQuantities[i] > 0)
+            {
+                int removeAmount = Mathf.Min(quantityLeft, inventoryQuantities[i]);
+                RemoveFromSlot(false, i, removeAmount);
+                quantityLeft -= removeAmount;
+            }
+        }
+    }
+
+    void TryRemoveFromHotbar(int itemId, ref int quantityLeft)
+    {
+        for (int i = 0; i < hotbar.Count && quantityLeft > 0; i++)
+        {
+            if (hotbar[i] == itemId && hotbarQuantities[i] > 0)
+            {
+                int removeAmount = Mathf.Min(quantityLeft, hotbarQuantities[i]);
+                RemoveFromSlot(true, i, removeAmount);
+                quantityLeft -= removeAmount;
+            }
+        }
+    }
+
+    void RemoveFromSlot(bool isHotbar, int slotIndex, int removeAmount)
+    {
+        if (isHotbar)
+        {
+            hotbarQuantities[slotIndex] -= removeAmount;
+            if (hotbarQuantities[slotIndex] <= 0)
+            {
+                hotbarQuantities[slotIndex] = 0;
+                hotbar[slotIndex] = -1;
+            }
+        }
+        else
+        {
+            inventoryQuantities[slotIndex] -= removeAmount;
+            if (inventoryQuantities[slotIndex] <= 0)
+            {
+                inventoryQuantities[slotIndex] = 0;
+                inventory[slotIndex] = -1;
+            }
+        }
     }
 }

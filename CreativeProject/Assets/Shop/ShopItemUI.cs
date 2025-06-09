@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using static UnityEditor.Progress;
 
 public class ShopItemUI : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class ShopItemUI : MonoBehaviour
     public ItemDatabase.ItemData itemData;
 
     private bool buyInProgress = false;
+    private bool sellInProgress = false; 
 
     private void Awake()
     {
@@ -71,6 +73,39 @@ public class ShopItemUI : MonoBehaviour
             Debug.LogWarning("Not enough money to buy this item.");
         }
     }
+    public void OnSellClicked()
+    {
+        if (sellInProgress) return; // Prevent double sell in same frame
+        sellInProgress = true;
+        StartCoroutine(ResetSellFlag());
+
+        if (itemData == null)
+            return;
+
+        int sellPrice = itemData.price; // Assuming you have a sellPrice field
+
+        InventorySystem.Instance.RemoveItem(itemData.id, 1);
+
+        // Check if player has the item to sell
+        bool removed = InventorySystem.Instance.RemoveItem(itemData.id, 1);
+        if (removed)
+        {
+            PlayerWallet.Instance.AddMoney(sellPrice);
+            Debug.Log($"Sold 1 {itemData.itemName} for ${sellPrice}");
+        }
+        else
+        {
+            Debug.LogWarning("You don't have this item to sell.");
+        }
+    }
+
+    // Coroutine to reset sellInProgress flag
+    private System.Collections.IEnumerator ResetSellFlag()
+    {
+        yield return null;
+        sellInProgress = false;
+    }
+
 
     private System.Collections.IEnumerator ResetBuyFlag()
     {
