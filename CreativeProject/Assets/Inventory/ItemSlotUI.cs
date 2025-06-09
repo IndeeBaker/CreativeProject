@@ -12,6 +12,10 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public ItemDatabase itemDatabase;
 
+    // New fields for slot identity
+    public int slotIndex = -1;
+    public bool isHotbarSlot = false;
+
     private Canvas canvas;
     private GameObject dragIconObj;
     private RectTransform dragIconRect;
@@ -85,21 +89,19 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             Destroy(dragIconObj);
 
         var nearest = InventoryManager.Instance.GetNearestSlot(eventData.position);
+        Debug.Log($"OnEndDrag nearest slot: {nearest}, current slot: {this}");
+
         if (nearest != null && nearest != this)
         {
-            // Swap items including quantity
-            int tempId = nearest.itemId;
-            int tempQty = nearest.quantity;
-
-            nearest.SetItem(this.itemId, this.quantity);
-            this.SetItem(tempId, tempQty);
+            Debug.Log($"Swapping items between slot {slotIndex} (hotbar={isHotbarSlot}) and slot {nearest.slotIndex} (hotbar={nearest.isHotbarSlot})");
+            InventorySystem.Instance.SwapItems(this, nearest);
         }
         else
         {
-            // Dropped outside - optionally clear or keep
-            // this.SetItem(this.itemId, this.quantity);
+            Debug.Log("Dropped outside or on the same slot - no swap.");
         }
     }
+
 
     void UpdateDragPosition(PointerEventData eventData)
     {

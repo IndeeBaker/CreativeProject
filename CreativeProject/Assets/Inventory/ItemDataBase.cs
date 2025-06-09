@@ -27,7 +27,10 @@ public class ItemDatabase : ScriptableObject
         public Sprite icon;
         public int price;
         public int maxStack;
-        public ItemType itemType; // <-- NEW: item type for gameplay logic
+        public ItemType itemType;
+
+        [Tooltip("Prefab to instantiate when planting this seed")]
+        public GameObject plantPrefab;  // <-- Added prefab reference
     }
 
     public List<ItemData> items = new List<ItemData>();

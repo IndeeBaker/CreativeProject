@@ -1,14 +1,14 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;  // Needed for Tilemap and TileBase
+using UnityEngine.Tilemaps;
 
 public class PlayerInteraction : MonoBehaviour
 {
     public float interactRange = 2f;
     public LayerMask interactLayerMask;
 
-    public Tilemap soilTilemap;           // Your base soil tilemap
-    public Tilemap nontillableTilemap;    // Tilemap where tilling is blocked
-    public TileBase tilledSoilTile;       // The tile to set when tilling soil
+    public Tilemap soilTilemap;
+    public Tilemap nontillableTilemap;
+    public TileBase tilledSoilTile;
 
     public GameObject flowerPlantPrefab;
     public GameObject carrotPlantPrefab;
@@ -16,7 +16,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))  // Interaction key
+        if (Input.GetKeyDown(KeyCode.F))
         {
             TryInteract();
         }
@@ -49,7 +49,7 @@ public class PlayerInteraction : MonoBehaviour
                     break;
 
                 case ItemType.Hoe:
-                    UseHoe(hit.point);  // Pass hit position for tile check
+                    UseHoe(hit.point);
                     break;
 
                 case ItemType.WateringCan:
@@ -57,7 +57,7 @@ public class PlayerInteraction : MonoBehaviour
                     break;
 
                 case ItemType.Seeds:
-                    PlantSeed(hit.collider.gameObject, selectedItem);
+                    PlantSeed(hit.point, selectedItem);
                     break;
 
                 default:
@@ -74,28 +74,23 @@ public class PlayerInteraction : MonoBehaviour
     void UsePickaxe(GameObject target)
     {
         Debug.Log("Breaking rock: " + target.name);
-        // TODO: rock breaking logic here
     }
 
     void UseAxe(GameObject target)
     {
         Debug.Log("Chopping tree: " + target.name);
-        // TODO: tree chopping logic here
     }
 
-    // Updated UseHoe to accept Vector2 point instead of GameObject target
     void UseHoe(Vector2 hitPosition)
     {
         Vector3Int tilePosition = soilTilemap.WorldToCell(hitPosition);
 
-        // Check if nontillable tile exists at this position
         if (nontillableTilemap.HasTile(tilePosition))
         {
             Debug.Log("Cannot till here — area is protected or non-tillable.");
             return;
         }
 
-        // Otherwise, set the tilled soil tile
         soilTilemap.SetTile(tilePosition, tilledSoilTile);
         Debug.Log("Soil tilled at " + tilePosition);
     }
@@ -103,17 +98,30 @@ public class PlayerInteraction : MonoBehaviour
     void UseWateringCan(GameObject target)
     {
         Debug.Log("Watering plant: " + target.name);
-        // TODO: watering logic here
     }
 
-    void PlantSeed(GameObject target, ItemDatabase.ItemData seedItem)
+    void PlantSeed(Vector2 hitPosition, ItemDatabase.ItemData seedItem)
     {
-        // Get the position on the tilemap where the player is interacting
-        Vector3 hitPosition = target.transform.position;
         Vector3Int tilePos = soilTilemap.WorldToCell(hitPosition);
 
-        // Check if there’s already a plant here (optional)
-        Collider2D existingPlant = Physics2D.OverlapCircle(soilTilemap.CellToWorld(tilePos) + new Vector3(0.5f, 0.5f, 0), 0.1f);
+        TileBase tile = soilTilemap.GetTile(tilePos);
+        string tileName = tile != null ? tile.name.ToLower().Trim() : "null";
+        Debug.Log($"Tile at position: {tileName} ({(tile != null ? tile.GetType().Name : "null")})");
+
+        if (tile == null || (tileName != "legacy_atlas_961" && tileName != "new fangauto tile"))
+        {
+            Debug.Log("You can only plant on tilled soil.");
+            return;
+        }
+
+
+        // Check if there's already a plant here on the "Crops" layer
+        Collider2D existingPlant = Physics2D.OverlapCircle(
+            soilTilemap.CellToWorld(tilePos) + new Vector3(0.5f, 0.5f, 0),
+            0.1f,
+            LayerMask.GetMask("Crops")
+        );
+
         if (existingPlant != null)
         {
             Debug.Log("Already a plant here.");
@@ -121,31 +129,39 @@ public class PlayerInteraction : MonoBehaviour
         }
 
         GameObject prefabToPlant = null;
+        string seedName = seedItem.itemName.ToLower().Trim();
+        Debug.Log("Seed item name received: " + seedName);
 
-        switch (seedItem.itemName.ToLower())
+        switch (seedName)
         {
             case "flower seed":
+            case "flower seeds":
                 prefabToPlant = flowerPlantPrefab;
                 break;
+
             case "carrot seed":
+            case "carrot seeds":
                 prefabToPlant = carrotPlantPrefab;
                 break;
+
             case "wheat seed":
+            case "wheat seeds":
                 prefabToPlant = wheatPlantPrefab;
                 break;
+
             default:
-                Debug.Log("Unknown seed type.");
+                Debug.Log("Unknown seed type: " + seedItem.itemName);
                 return;
         }
 
         if (prefabToPlant != null)
         {
-            Vector3 spawnPos = soilTilemap.CellToWorld(tilePos) + new Vector3(0.5f, 0.5f, 0); // Center the plant in tile
+            Vector3 spawnPos = soilTilemap.CellToWorld(tilePos) + new Vector3(0.5f, 0.5f, 0);
             Instantiate(prefabToPlant, spawnPos, Quaternion.identity);
             Debug.Log($"Planted {seedItem.itemName} at {tilePos}");
 
-            // TODO: remove one seed from inventory here
+            // TODO: Remove 1 from inventory stack
+            // InventorySystem.Instance.RemoveItem(seedItem.id, 1);
         }
     }
 }
-

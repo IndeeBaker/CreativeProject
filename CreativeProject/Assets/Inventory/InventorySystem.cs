@@ -49,6 +49,20 @@ public class InventorySystem : MonoBehaviour
         hotbar = new List<int> { 0, 1, 2, 3, -1, -1, -1, -1, -1, -1 };
         hotbarQuantities = new List<int> { 1, 1, 1, 1, 0, 0, 0, 0, 0, 0 };
 
+        // Assign slot indexes and hotbar flags to slots (IMPORTANT)
+        for (int i = 0; i < inventorySlots.Count; i++)
+        {
+            inventorySlots[i].slotIndex = i;
+            inventorySlots[i].isHotbarSlot = false;
+            inventorySlots[i].itemDatabase = itemDatabase;
+        }
+        for (int i = 0; i < hotbarSlots.Count; i++)
+        {
+            hotbarSlots[i].slotIndex = i;
+            hotbarSlots[i].isHotbarSlot = true;
+            hotbarSlots[i].itemDatabase = itemDatabase;
+        }
+
         // Update all UI slots at start
         UpdateUI();
 
@@ -75,7 +89,7 @@ public class InventorySystem : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha0)) { selectedHotbarIndex = 9; SelectHotbar(9); }
 
         // Debug to confirm selected hotbar index
-        Debug.Log("Selected hotbar index: " + selectedHotbarIndex);
+        // Debug.Log("Selected hotbar index: " + selectedHotbarIndex);
     }
 
     public int GetHeldItemId()
@@ -156,7 +170,7 @@ public class InventorySystem : MonoBehaviour
 
     public void UpdateUI()
     {
-        // Update inventory UI slots with debug checks
+        // Update inventory UI slots
         for (int i = 0; i < inventorySlots.Count; i++)
         {
             if (inventorySlots[i] == null)
@@ -170,7 +184,7 @@ public class InventorySystem : MonoBehaviour
             inventorySlots[i].SetItem(id, qty);
         }
 
-        // Update hotbar UI slots with debug checks
+        // Update hotbar UI slots
         for (int i = 0; i < hotbarSlots.Count; i++)
         {
             if (hotbarSlots[i] == null)
@@ -192,6 +206,61 @@ public class InventorySystem : MonoBehaviour
         for (int i = 0; i < selected.Length; i++)
         {
             selected[i].SetActive(i == index);
+        }
+
+        UpdateUI();
+    }
+
+    public void SwapItems(ItemSlotUI slotA, ItemSlotUI slotB)
+    {
+        // Get current data from the slots' lists
+        int idA = slotA.isHotbarSlot ? hotbar[slotA.slotIndex] : inventory[slotA.slotIndex];
+        int qtyA = slotA.isHotbarSlot ? hotbarQuantities[slotA.slotIndex] : inventoryQuantities[slotA.slotIndex];
+
+        int idB = slotB.isHotbarSlot ? hotbar[slotB.slotIndex] : inventory[slotB.slotIndex];
+        int qtyB = slotB.isHotbarSlot ? hotbarQuantities[slotB.slotIndex] : inventoryQuantities[slotB.slotIndex];
+
+        // Swap the data
+        if (slotA.isHotbarSlot)
+        {
+            hotbar[slotA.slotIndex] = idB;
+            hotbarQuantities[slotA.slotIndex] = qtyB;
+        }
+        else
+        {
+            inventory[slotA.slotIndex] = idB;
+            inventoryQuantities[slotA.slotIndex] = qtyB;
+        }
+
+        if (slotB.isHotbarSlot)
+        {
+            hotbar[slotB.slotIndex] = idA;
+            hotbarQuantities[slotB.slotIndex] = qtyA;
+        }
+        else
+        {
+            inventory[slotB.slotIndex] = idA;
+            inventoryQuantities[slotB.slotIndex] = qtyA;
+        }
+
+        UpdateUI();
+    }
+
+    // New method to consume an item from the currently selected hotbar slot
+    public void ConsumeSelectedHotbarItem(int amount = 1)
+    {
+        int index = selectedHotbarIndex;
+        if (index < 0 || index >= hotbar.Count)
+            return;
+
+        if (hotbar[index] == -1)
+            return; // No item here
+
+        hotbarQuantities[index] -= amount;
+        if (hotbarQuantities[index] <= 0)
+        {
+            hotbarQuantities[index] = 0;
+            hotbar[index] = -1; // Clear slot if none left
         }
 
         UpdateUI();
