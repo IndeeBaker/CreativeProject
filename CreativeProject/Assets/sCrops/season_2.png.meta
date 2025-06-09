@@ -1,0 +1,1680 @@
+fileFormatVersion: 2
+guid: f29fb709bfe666344b8a3eb85bb281e2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8434641486955912709
+    second: season_2_0
+  - first:
+      213: -8780319014575288731
+    second: season_2_1
+  - first:
+      213: 8910439255337771213
+    second: season_2_2
+  - first:
+      213: 8964420787264945633
+    second: season_2_3
+  - first:
+      213: -8524704520609562867
+    second: season_2_4
+  - first:
+      213: -1060490235875348043
+    second: season_2_5
+  - first:
+      213: 4943604806597086582
+    second: season_2_6
+  - first:
+      213: -5860919425142993303
+    second: season_2_7
+  - first:
+      213: -544213549472318394
+    second: season_2_8
+  - first:
+      213: -4731444650213908078
+    second: season_2_9
+  - first:
+      213: -3469450307648053014
+    second: season_2_10
+  - first:
+      213: 5780692457447578396
+    second: season_2_11
+  - first:
+      213: -4824308228401476303
+    second: season_2_12
+  - first:
+      213: -7137017532393168345
+    second: season_2_13
+  - first:
+      213: -1604954179811446447
+    second: season_2_14
+  - first:
+      213: -2484037364806364263
+    second: season_2_15
+  - first:
+      213: -1677612493491912133
+    second: season_2_16
+  - first:
+      213: 3937949381013123299
+    second: season_2_17
+  - first:
+      213: -6782164058284345118
+    second: season_2_18
+  - first:
+      213: -1667372173454524097
+    second: season_2_19
+  - first:
+      213: 5590202757365069250
+    second: season_2_20
+  - first:
+      213: -4423921883685632259
+    second: season_2_21
+  - first:
+      213: -1601544406083493849
+    second: season_2_22
+  - first:
+      213: -2316546079163336668
+    second: season_2_23
+  - first:
+      213: 474913494719588344
+    second: season_2_24
+  - first:
+      213: 4068083639831243065
+    second: season_2_25
+  - first:
+      213: -363595247933922582
+    second: season_2_26
+  - first:
+      213: 2385619884153797325
+    second: season_2_27
+  - first:
+      213: 6176344137613814669
+    second: season_2_28
+  - first:
+      213: -6157872202998589522
+    second: season_2_29
+  - first:
+      213: -2883810406429245193
+    second: season_2_30
+  - first:
+      213: 6527413348145588647
+    second: season_2_31
+  - first:
+      213: 7961658611651989074
+    second: season_2_32
+  - first:
+      213: -4208384052510520906
+    second: season_2_33
+  - first:
+      213: -439928519393727907
+    second: season_2_34
+  - first:
+      213: -5239303177810694302
+    second: season_2_35
+  - first:
+      213: -3683327577909013917
+    second: season_2_36
+  - first:
+      213: -5482466084287383052
+    second: season_2_37
+  - first:
+      213: -6618447389439299550
+    second: season_2_38
+  - first:
+      213: 3323995335267974916
+    second: season_2_39
+  - first:
+      213: 942843437789933130
+    second: season_2_40
+  - first:
+      213: 113534636028296205
+    second: season_2_41
+  - first:
+      213: 7358692160764477666
+    second: season_2_42
+  - first:
+      213: 6054893256515008103
+    second: season_2_43
+  - first:
+      213: 7308313795026869356
+    second: season_2_44
+  - first:
+      213: -6016379247302879844
+    second: season_2_45
+  - first:
+      213: -3002562869879994650
+    second: season_2_46
+  - first:
+      213: -3788163976973813659
+    second: season_2_47
+  - first:
+      213: -8322777878804051795
+    second: season_2_48
+  - first:
+      213: 5793726119516483309
+    second: season_2_49
+  - first:
+      213: 4128352006332113728
+    second: season_2_50
+  - first:
+      213: -9039301477031592933
+    second: season_2_51
+  - first:
+      213: 8552973800936124706
+    second: season_2_52
+  - first:
+      213: 9084302977927931682
+    second: season_2_53
+  - first:
+      213: -2834757616528443333
+    second: season_2_54
+  - first:
+      213: -6728646037518712869
+    second: season_2_55
+  - first:
+      213: -5505578445756474263
+    second: season_2_56
+  - first:
+      213: -7475049672233405409
+    second: season_2_57
+  - first:
+      213: -1754235539384130585
+    second: season_2_58
+  - first:
+      213: 6585224040705946130
+    second: season_2_59
+  - first:
+      213: 4236258061688084672
+    second: season_2_60
+  - first:
+      213: -1875901215825197260
+    second: season_2_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: season_2_0
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 539
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1683a914222fa80800000000000000
+      internalID: -8434641486955912709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 539
+        width: 62
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ec1a9506a062680800000000000000
+      internalID: -8780319014575288731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 511
+        width: 130
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0aa1f0b4d38ab70800000000000000
+      internalID: 8910439255337771213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_3
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 575
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1edfd02e535086c70800000000000000
+      internalID: 8964420787264945633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_4
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 575
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0f76e1876a22b980800000000000000
+      internalID: -8524704520609562867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 547
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b131eacfb16841f0800000000000000
+      internalID: -1060490235875348043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_6
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 539
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d022711663b9440800000000000000
+      internalID: 4943604806597086582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_7
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 539
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e4a27d5d4d9aea0800000000000000
+      internalID: -5860919425142993303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_8
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 515
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64c7fbdf8a09278f0800000000000000
+      internalID: -544213549472318394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_9
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 515
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 291e39da828865eb0800000000000000
+      internalID: -4731444650213908078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 527
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0a4ceb3590adfc0800000000000000
+      internalID: -3469450307648053014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_11
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 411
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b51f1a925293050800000000000000
+      internalID: 5780692457447578396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_12
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 407
+        width: 66
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13dc22ff93d9c0db0800000000000000
+      internalID: -4824308228401476303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_13
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 451
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72268f92e5834fc90800000000000000
+      internalID: -7137017532393168345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_14
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 451
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1517f874dae0ab9e0800000000000000
+      internalID: -1604954179811446447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 407
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9935bed7d2de68dd0800000000000000
+      internalID: -2484037364806364263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_16
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 415
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3248a6535ce7b8e0800000000000000
+      internalID: -1677612493491912133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_17
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 411
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0b1ce091866a630800000000000000
+      internalID: 3937949381013123299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_18
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 411
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e83a81f8b9e0e1a0800000000000000
+      internalID: -6782164058284345118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_19
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 411
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f314fd4a7dd4cd8e0800000000000000
+      internalID: -1667372173454524097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_20
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 387
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c577272ac3649d40800000000000000
+      internalID: 5590202757365069250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_21
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 387
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df647d85c721b92c0800000000000000
+      internalID: -4423921883685632259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_22
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 399
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720216719db26c9e0800000000000000
+      internalID: -1601544406083493849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_23
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 283
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42835a55d99f9dfd0800000000000000
+      internalID: -2316546079163336668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_24
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 279
+        width: 66
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7ecc7ae4b379600800000000000000
+      internalID: 474913494719588344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_25
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 323
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93928bc448cb47830800000000000000
+      internalID: 4068083639831243065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_26
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 319
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2e0e46c0044faf0800000000000000
+      internalID: -363595247933922582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_27
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 279
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca781425ac6b1120800000000000000
+      internalID: 2385619884153797325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_28
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 287
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ba90df448c6b550800000000000000
+      internalID: 6176344137613814669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_29
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 283
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea754007bd7da8aa0800000000000000
+      internalID: -6157872202998589522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_30
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 283
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0c535e6b5aaf7d0800000000000000
+      internalID: -2883810406429245193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_31
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 283
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a96c5e3bd7069a50800000000000000
+      internalID: 6527413348145588647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_32
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 259
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e427a135e7d7e60800000000000000
+      internalID: 7961658611651989074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_33
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 259
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b901bf4001d895c0800000000000000
+      internalID: -4208384052510520906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_34
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 271
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a29faa75f05e9f0800000000000000
+      internalID: -439928519393727907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_35
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 179
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26fa400d4814a47b0800000000000000
+      internalID: -5239303177810694302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_36
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 183
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362555f351132ecc0800000000000000
+      internalID: -3683327577909013917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_37
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 167
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f97ce8c42e5ae3b0800000000000000
+      internalID: -5482466084287383052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_38
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 127
+        width: 282
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220fbd35a2d8624a0800000000000000
+      internalID: -6618447389439299550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_39
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 127
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ff3b96524312e20800000000000000
+      internalID: 3323995335267974916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_40
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 131
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ee64c7c17a51d00800000000000000
+      internalID: 942843437789933130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_41
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 171
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c7b22662b539100800000000000000
+      internalID: 113534636028296205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_42
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 167
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e081dd38835f1660800000000000000
+      internalID: 7358692160764477666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_43
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 159
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7663c7b265d470450800000000000000
+      internalID: 6054893256515008103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_44
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 163
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cd9abeca85c6560800000000000000
+      internalID: 7308313795026869356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_45
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 155
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95da7263f6818ca0800000000000000
+      internalID: -6016379247302879844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_46
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 151
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e686056af0c456d0800000000000000
+      internalID: -3002562869879994650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_47
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 151
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5687b89feecbd6bc0800000000000000
+      internalID: -3788163976973813659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_48
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 139
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da8c76d7d9d8f7c80800000000000000
+      internalID: -8322777878804051795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_49
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 143
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deeaeaf8533776050800000000000000
+      internalID: 5793726119516483309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_50
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 139
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043623dd64ada4930800000000000000
+      internalID: 4128352006332113728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_51
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 131
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c3edbe233fd8280800000000000000
+      internalID: -9039301477031592933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_52
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 127
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 221350a3b5442b670800000000000000
+      internalID: 8552973800936124706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_53
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 135
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227ea6f7d6de11e70800000000000000
+      internalID: 9084302977927931682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_54
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 27
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b383d7a87fae8a8d0800000000000000
+      internalID: -2834757616528443333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_55
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 27
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf7b5a241c0f92a0800000000000000
+      internalID: -6728646037518712869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_56
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 27
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c53a9c2914893b0800000000000000
+      internalID: -5505578445756474263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_57
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 27
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f14b0287de9434890800000000000000
+      internalID: -7475049672233405409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_58
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 27
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3a4ae3214b7a7e0800000000000000
+      internalID: -1754235539384130585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_59
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 27
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212f3a0006a636b50800000000000000
+      internalID: 6585224040705946130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_60
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 3
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c89dcf23463aca30800000000000000
+      internalID: 4236258061688084672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: season_2_61
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 3
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 437040d78c577f5e0800000000000000
+      internalID: -1875901215825197260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

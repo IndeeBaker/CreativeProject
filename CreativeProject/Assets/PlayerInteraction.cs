@@ -10,6 +10,10 @@ public class PlayerInteraction : MonoBehaviour
     public Tilemap nontillableTilemap;    // Tilemap where tilling is blocked
     public TileBase tilledSoilTile;       // The tile to set when tilling soil
 
+    public GameObject flowerPlantPrefab;
+    public GameObject carrotPlantPrefab;
+    public GameObject wheatPlantPrefab;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))  // Interaction key
@@ -104,7 +108,44 @@ public class PlayerInteraction : MonoBehaviour
 
     void PlantSeed(GameObject target, ItemDatabase.ItemData seedItem)
     {
-        Debug.Log($"Planting {seedItem.itemName} on {target.name}");
-        // TODO: planting logic here
+        // Get the position on the tilemap where the player is interacting
+        Vector3 hitPosition = target.transform.position;
+        Vector3Int tilePos = soilTilemap.WorldToCell(hitPosition);
+
+        // Check if there’s already a plant here (optional)
+        Collider2D existingPlant = Physics2D.OverlapCircle(soilTilemap.CellToWorld(tilePos) + new Vector3(0.5f, 0.5f, 0), 0.1f);
+        if (existingPlant != null)
+        {
+            Debug.Log("Already a plant here.");
+            return;
+        }
+
+        GameObject prefabToPlant = null;
+
+        switch (seedItem.itemName.ToLower())
+        {
+            case "flower seed":
+                prefabToPlant = flowerPlantPrefab;
+                break;
+            case "carrot seed":
+                prefabToPlant = carrotPlantPrefab;
+                break;
+            case "wheat seed":
+                prefabToPlant = wheatPlantPrefab;
+                break;
+            default:
+                Debug.Log("Unknown seed type.");
+                return;
+        }
+
+        if (prefabToPlant != null)
+        {
+            Vector3 spawnPos = soilTilemap.CellToWorld(tilePos) + new Vector3(0.5f, 0.5f, 0); // Center the plant in tile
+            Instantiate(prefabToPlant, spawnPos, Quaternion.identity);
+            Debug.Log($"Planted {seedItem.itemName} at {tilePos}");
+
+            // TODO: remove one seed from inventory here
+        }
     }
 }
+
