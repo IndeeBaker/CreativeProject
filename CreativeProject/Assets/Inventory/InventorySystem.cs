@@ -87,9 +87,6 @@ public class InventorySystem : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha8)) { selectedHotbarIndex = 7; SelectHotbar(7); }
         else if (Input.GetKeyDown(KeyCode.Alpha9)) { selectedHotbarIndex = 8; SelectHotbar(8); }
         else if (Input.GetKeyDown(KeyCode.Alpha0)) { selectedHotbarIndex = 9; SelectHotbar(9); }
-
-        // Debug to confirm selected hotbar index
-        // Debug.Log("Selected hotbar index: " + selectedHotbarIndex);
     }
 
     public int GetHeldItemId()
@@ -122,7 +119,7 @@ public class InventorySystem : MonoBehaviour
 
         int maxStack = itemData.maxStack;
 
-        // Try to stack into existing slots first (inventory)
+        // Stack into existing inventory slots
         for (int i = 0; i < inventory.Count; i++)
         {
             if (inventory[i] == itemId && inventoryQuantities[i] < maxStack)
@@ -142,7 +139,7 @@ public class InventorySystem : MonoBehaviour
             }
         }
 
-        // Add to empty slots if any quantity remains
+        // Add to empty inventory slots
         for (int i = 0; i < inventory.Count; i++)
         {
             if (inventory[i] == -1)
@@ -164,6 +161,64 @@ public class InventorySystem : MonoBehaviour
 
         // No space left
         Debug.LogWarning("Inventory full or not enough space to add all items.");
+        UpdateUI();
+        return false;
+    }
+
+    // Add item to hotbar with stacking
+    public bool AddItemToHotbar(int itemId, int quantityToAdd)
+    {
+        if (itemId < 0)
+            return false;
+
+        var itemData = itemDatabase.GetItemById(itemId);
+        if (itemData == null)
+            return false;
+
+        int maxStack = itemData.maxStack;
+
+        // Stack into existing hotbar slots
+        for (int i = 0; i < hotbar.Count; i++)
+        {
+            if (hotbar[i] == itemId && hotbarQuantities[i] < maxStack)
+            {
+                int spaceLeft = maxStack - hotbarQuantities[i];
+                int addAmount = Mathf.Min(spaceLeft, quantityToAdd);
+                hotbarQuantities[i] += addAmount;
+                quantityToAdd -= addAmount;
+
+                hotbarSlots[i].SetItem(hotbar[i], hotbarQuantities[i]);
+
+                if (quantityToAdd <= 0)
+                {
+                    UpdateUI();
+                    return true;
+                }
+            }
+        }
+
+        // Add to empty hotbar slots
+        for (int i = 0; i < hotbar.Count; i++)
+        {
+            if (hotbar[i] == -1)
+            {
+                int addAmount = Mathf.Min(quantityToAdd, maxStack);
+                hotbar[i] = itemId;
+                hotbarQuantities[i] = addAmount;
+                quantityToAdd -= addAmount;
+
+                hotbarSlots[i].SetItem(hotbar[i], hotbarQuantities[i]);
+
+                if (quantityToAdd <= 0)
+                {
+                    UpdateUI();
+                    return true;
+                }
+            }
+        }
+
+        // No space left
+        Debug.LogWarning("Hotbar full or not enough space to add all items.");
         UpdateUI();
         return false;
     }
@@ -246,7 +301,7 @@ public class InventorySystem : MonoBehaviour
         UpdateUI();
     }
 
-    // New method to consume an item from the currently selected hotbar slot
+    // Consume an item from the currently selected hotbar slot
     public void ConsumeSelectedHotbarItem(int amount = 1)
     {
         int index = selectedHotbarIndex;

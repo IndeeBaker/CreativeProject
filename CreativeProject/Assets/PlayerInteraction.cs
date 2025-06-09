@@ -20,6 +20,11 @@ public class PlayerInteraction : MonoBehaviour
         {
             TryInteract();
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            TryHarvest();
+        }
     }
 
     void TryInteract()
@@ -53,7 +58,7 @@ public class PlayerInteraction : MonoBehaviour
                     break;
 
                 case ItemType.WateringCan:
-                    UseWateringCan(hit.collider.gameObject);
+                    UseWateringCan(hit.point);
                     break;
 
                 case ItemType.Seeds:
@@ -69,6 +74,73 @@ public class PlayerInteraction : MonoBehaviour
         {
             Debug.Log("Nothing interactable in range.");
         }
+    }
+
+    void TryHarvest()
+    {
+        // Use the Crops layer specifically for harvesting
+        int cropsLayerMask = LayerMask.GetMask("Crops");
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, interactRange, cropsLayerMask);
+
+        if (hit.collider != null)
+        {
+            CropGrowth crop = hit.collider.GetComponent<CropGrowth>();
+
+            if (crop != null)
+            {
+                if (crop.currentStage >= crop.growthStages.Length - 1)
+                {
+                    Debug.Log("Harvesting crop: " + crop.name);
+
+                    int cropItemID = crop.harvestItemID;
+
+                    if (cropItemID == -1)
+                    {
+                        Debug.LogWarning("Crop item ID not set in CropGrowth.");
+                        return;
+                    }
+
+                    bool added = InventorySystem.Instance.AddItemToHotbar(cropItemID, 1);
+
+                    if (added)
+                    {
+                        Destroy(crop.gameObject);
+                        Debug.Log("Crop harvested and added to hotbar!");
+                    }
+                    else
+                    {
+                        Debug.Log("Hotbar full, cannot add crop.");
+                    }
+                }
+                else
+                {
+                    Debug.Log("Crop is not fully grown yet.");
+                }
+            }
+            else
+            {
+                Debug.Log("No crop to harvest in front.");
+            }
+        }
+        else
+        {
+            Debug.Log("Nothing to harvest in range.");
+        }
+    }
+
+    int GetItemIDFromCrop(CropGrowth crop)
+    {
+        string cropName = crop.name.ToLower();
+
+        if (cropName.Contains("wheat"))
+            return 11; // Correct ID for wheat
+        if (cropName.Contains("carrot"))
+            return 12; // Correct ID for carrot
+        if (cropName.Contains("flower"))
+            return 13; // Correct ID for flower
+
+        return -1; // Unknown crop
     }
 
     void UsePickaxe(GameObject target)
@@ -95,9 +167,26 @@ public class PlayerInteraction : MonoBehaviour
         Debug.Log("Soil tilled at " + tilePosition);
     }
 
-    void UseWateringCan(GameObject target)
+    void UseWateringCan(Vector2 hitPoint)
     {
-        Debug.Log("Watering plant: " + target.name);
+        Collider2D cropCollider = Physics2D.OverlapCircle(hitPoint, 0.2f, LayerMask.GetMask("Crops"));
+        if (cropCollider != null)
+        {
+            CropGrowth crop = cropCollider.GetComponent<CropGrowth>();
+            if (crop != null)
+            {
+                crop.WaterCrop();
+                Debug.Log("Watered crop: " + crop.name);
+            }
+            else
+            {
+                Debug.Log("Crop found but missing CropGrowth script.");
+            }
+        }
+        else
+        {
+            Debug.Log("No crop to water.");
+        }
     }
 
     void PlantSeed(Vector2 hitPosition, ItemDatabase.ItemData seedItem)
@@ -111,14 +200,12 @@ public class PlayerInteraction : MonoBehaviour
             return;
         }
 
-        // Directly compare tile instance to the tilled soil tile
         if (tile != tilledSoilTile)
         {
             Debug.Log("You can only plant on tilled soil.");
             return;
         }
 
-        // Check for existing plant on "Crops" layer
         Collider2D existingPlant = Physics2D.OverlapCircle(
             soilTilemap.GetCellCenterWorld(tilePos),
             0.1f,
@@ -131,7 +218,6 @@ public class PlayerInteraction : MonoBehaviour
             return;
         }
 
-        // Choose plant prefab
         GameObject prefabToPlant = null;
         string seedName = seedItem.itemName.ToLower().Trim();
 
@@ -157,7 +243,6 @@ public class PlayerInteraction : MonoBehaviour
                 return;
         }
 
-        // Plant the seed
         if (prefabToPlant != null)
         {
             Vector3 spawnPos = soilTilemap.GetCellCenterWorld(tilePos);
@@ -165,7 +250,6 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log($"Planted {seedItem.itemName} at {tilePos}");
 
             InventorySystem.Instance.ConsumeSelectedHotbarItem(1);
-            // InventorySystem.Instance.RemoveItem(seedItem.id, 1);
         }
     }
 }

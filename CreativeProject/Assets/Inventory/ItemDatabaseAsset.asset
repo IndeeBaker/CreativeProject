@@ -47,7 +47,7 @@ MonoBehaviour:
     price: 10
     maxStack: 99
     itemType: 5
-    plantPrefab: {fileID: 4801847226953531761, guid: cbeec13e11b2a8d43984fcd528a8ed41, type: 3}
+    plantPrefab: {fileID: 0}
   - id: 5
     itemName: Carrot Seeds
     icon: {fileID: -396096217744191584, guid: aea8212cf43e27a42b73099655bedea3, type: 3}
@@ -110,7 +110,7 @@ MonoBehaviour:
     price: 60
     maxStack: 99
     itemType: 10
-    plantPrefab: {fileID: 0}
+    plantPrefab: {fileID: 8250808540343018084, guid: 5f5950fdf5c34ac4ebb911fb9465148c, type: 3}
   - id: 14
     itemName: Wood
     icon: {fileID: -4808768412303917861, guid: 95e9ed03d7868e741a3ee17dd0b76b5d, type: 3}

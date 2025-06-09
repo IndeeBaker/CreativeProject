@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7733987915685820442}
   - component: {fileID: 7676975567494631632}
   - component: {fileID: 9217847018762089929}
+  - component: {fileID: 2938064343446605669}
+  - component: {fileID: 3534857945937188315}
   m_Layer: 6
   m_Name: Wheat
   m_TagString: Untagged
@@ -79,8 +81,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -397451263
-  m_SortingLayer: 4
+  m_SortingLayerID: 996942595
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7720945941185500035, guid: 92503af47cc000f4dad8ce2e88a5d080, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -131,3 +133,62 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2938064343446605669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4801847226953531761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244e4a92f56b43a429160a19c79b703a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growthStages:
+  - {fileID: 6244503392099106008, guid: 4200ec296c942314187129e857cedb13, type: 3}
+  - {fileID: -6921868143500737980, guid: 8515af826f9c20a4580450824282a811, type: 3}
+  - {fileID: -898633422936500279, guid: 2fe043d43fbc8094881af0488d07fab7, type: 3}
+  - {fileID: 3780120660973897419, guid: 587b261318c4dcd4fb013222d38c33e5, type: 3}
+  - {fileID: 4144970822997216883, guid: 595f7882123b68d438dd8a4a2faadc8a, type: 3}
+  - {fileID: 7720945941185500035, guid: 92503af47cc000f4dad8ce2e88a5d080, type: 3}
+  currentStage: 0
+  isWatered: 0
+  harvestItemID: 11
+  wateredOverlayPrefab: {fileID: 4786171036430592613, guid: 2dd0b9c09addba643944af06a387609c, type: 3}
+--- !u!58 &3534857945937188315
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4801847226953531761}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.61
