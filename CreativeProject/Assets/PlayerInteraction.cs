@@ -103,21 +103,24 @@ public class PlayerInteraction : MonoBehaviour
     void PlantSeed(Vector2 hitPosition, ItemDatabase.ItemData seedItem)
     {
         Vector3Int tilePos = soilTilemap.WorldToCell(hitPosition);
-
         TileBase tile = soilTilemap.GetTile(tilePos);
-        string tileName = tile != null ? tile.name.ToLower().Trim() : "null";
-        Debug.Log($"Tile at position: {tileName} ({(tile != null ? tile.GetType().Name : "null")})");
 
-        if (tile == null || (tileName != "legacy_atlas_961" && tileName != "new fangauto tile"))
+        if (tile == null)
+        {
+            Debug.Log("No tile here.");
+            return;
+        }
+
+        // Directly compare tile instance to the tilled soil tile
+        if (tile != tilledSoilTile)
         {
             Debug.Log("You can only plant on tilled soil.");
             return;
         }
 
-
-        // Check if there's already a plant here on the "Crops" layer
+        // Check for existing plant on "Crops" layer
         Collider2D existingPlant = Physics2D.OverlapCircle(
-            soilTilemap.CellToWorld(tilePos) + new Vector3(0.5f, 0.5f, 0),
+            soilTilemap.GetCellCenterWorld(tilePos),
             0.1f,
             LayerMask.GetMask("Crops")
         );
@@ -128,9 +131,9 @@ public class PlayerInteraction : MonoBehaviour
             return;
         }
 
+        // Choose plant prefab
         GameObject prefabToPlant = null;
         string seedName = seedItem.itemName.ToLower().Trim();
-        Debug.Log("Seed item name received: " + seedName);
 
         switch (seedName)
         {
@@ -154,13 +157,13 @@ public class PlayerInteraction : MonoBehaviour
                 return;
         }
 
+        // Plant the seed
         if (prefabToPlant != null)
         {
-            Vector3 spawnPos = soilTilemap.CellToWorld(tilePos) + new Vector3(0.5f, 0.5f, 0);
+            Vector3 spawnPos = soilTilemap.GetCellCenterWorld(tilePos);
             Instantiate(prefabToPlant, spawnPos, Quaternion.identity);
             Debug.Log($"Planted {seedItem.itemName} at {tilePos}");
 
-            // TODO: Remove 1 from inventory stack
             // InventorySystem.Instance.RemoveItem(seedItem.id, 1);
         }
     }
