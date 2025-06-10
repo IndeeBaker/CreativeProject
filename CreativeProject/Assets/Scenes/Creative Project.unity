@@ -124030,6 +124030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow
       objectReference: {fileID: 0}
+    - target: {fileID: 4814894881221297334, guid: b8530a9b540f0cc4abd28edb4e8f0ad0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5139878503461672812, guid: b8530a9b540f0cc4abd28edb4e8f0ad0, type: 3}
       propertyPath: m_SortingLayer
       value: 4
