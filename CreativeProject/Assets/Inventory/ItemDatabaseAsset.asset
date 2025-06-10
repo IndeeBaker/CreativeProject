@@ -52,7 +52,7 @@ MonoBehaviour:
   - id: 4
     itemName: Wheat Seeds
     icon: {fileID: -3482891182275934389, guid: 57e9cc0ef97945f468c7adb40d4f298a, type: 3}
-    price: 10
+    price: 50
     maxStack: 99
     itemType: 5
     goesToInventory: 1
@@ -61,7 +61,7 @@ MonoBehaviour:
   - id: 5
     itemName: Carrot Seeds
     icon: {fileID: -396096217744191584, guid: aea8212cf43e27a42b73099655bedea3, type: 3}
-    price: 20
+    price: 10
     maxStack: 99
     itemType: 5
     goesToInventory: 1
@@ -88,7 +88,7 @@ MonoBehaviour:
   - id: 8
     itemName: Milk
     icon: {fileID: -3599523525966710095, guid: 733540764e0f4f4428b61ef6bfaef928, type: 3}
-    price: 50
+    price: 75
     maxStack: 99
     itemType: 10
     goesToInventory: 1
@@ -97,7 +97,7 @@ MonoBehaviour:
   - id: 9
     itemName: Egg
     icon: {fileID: 5704927153012780341, guid: 37f4780556719134a9df7f490afcc8a4, type: 3}
-    price: 30
+    price: 25
     maxStack: 99
     itemType: 6
     goesToInventory: 1
@@ -106,7 +106,7 @@ MonoBehaviour:
   - id: 10
     itemName: Dinosaur Egg
     icon: {fileID: 4366551636165113372, guid: 64c823837d547c14696461c26a66836f, type: 3}
-    price: 100
+    price: 125
     maxStack: 99
     itemType: 10
     goesToInventory: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
   - id: 11
     itemName: Wheat
     icon: {fileID: 7026743440863518669, guid: f56eb3b5709e0684e80b77d93458a62c, type: 3}
-    price: 20
+    price: 75
     maxStack: 99
     itemType: 6
     goesToInventory: 1
@@ -124,7 +124,7 @@ MonoBehaviour:
   - id: 12
     itemName: Carrots
     icon: {fileID: 8260252514105556690, guid: c39debe517b94d34aa8891555fba6c08, type: 3}
-    price: 40
+    price: 20
     maxStack: 99
     itemType: 10
     goesToInventory: 1
@@ -132,8 +132,8 @@ MonoBehaviour:
     plantPrefab: {fileID: 0}
   - id: 13
     itemName: Flowers
-    icon: {fileID: -9118279197286548304, guid: c49531b48cc8ab446979b91ea1a82037, type: 3}
-    price: 60
+    icon: {fileID: 21300000, guid: 68abd3de14649d746933e315fbb65430, type: 2}
+    price: 50
     maxStack: 99
     itemType: 10
     goesToInventory: 1
@@ -160,7 +160,7 @@ MonoBehaviour:
   - id: 16
     itemName: Cow
     icon: {fileID: -3576165310463019188, guid: 1ff7180d0acf22d41a31f6e9ee7ec8df, type: 3}
-    price: 10
+    price: 600
     maxStack: 99
     itemType: 9
     goesToInventory: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   - id: 17
     itemName: Sheep
     icon: {fileID: -7071734084718998226, guid: 12feb46932545bf498473c11bef30bd3, type: 3}
-    price: 10
+    price: 400
     maxStack: 99
     itemType: 9
     goesToInventory: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   - id: 18
     itemName: Chicken
     icon: {fileID: -8714301849626275311, guid: eab3363c20a29c8489fd6333958cd8e0, type: 3}
-    price: 10
+    price: 250
     maxStack: 99
     itemType: 9
     goesToInventory: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   - id: 19
     itemName: Dinosaur
     icon: {fileID: -8261122725574191275, guid: 10e042ab3628a4e47b94816314b81499, type: 3}
-    price: 20
+    price: 800
     maxStack: 99
     itemType: 9
     goesToInventory: 0
