@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8198600639394679418}
   - component: {fileID: 1640698400983304522}
+  - component: {fileID: 6281687882841901335}
   m_Layer: 0
   m_Name: Sheep
   m_TagString: Untagged
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 996942595
-  m_SortingLayer: 2
+  m_SortingLayerID: -397451263
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -8823968971589436688, guid: 12feb46932545bf498473c11bef30bd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -87,3 +88,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6281687882841901335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8354586995967815922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a586c57afa8a5448ecaec52e0ebf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  moveDuration: 1
+  idleDuration: 2

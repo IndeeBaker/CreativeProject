@@ -124018,9 +124018,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3611265864679386668, guid: b8530a9b540f0cc4abd28edb4e8f0ad0, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611265864679386668, guid: b8530a9b540f0cc4abd28edb4e8f0ad0, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4814894881221297334, guid: b8530a9b540f0cc4abd28edb4e8f0ad0, type: 3}
       propertyPath: m_Name
       value: Cow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139878503461672812, guid: b8530a9b540f0cc4abd28edb4e8f0ad0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139878503461672812, guid: b8530a9b540f0cc4abd28edb4e8f0ad0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -397451263
       objectReference: {fileID: 0}
     - target: {fileID: 7278264698959769247, guid: b8530a9b540f0cc4abd28edb4e8f0ad0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -124075,6 +124091,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7238460147599889563, guid: d07a238fc14760d419b2de58a0b213e4, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7238460147599889563, guid: d07a238fc14760d419b2de58a0b213e4, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4587914942548418174, guid: d07a238fc14760d419b2de58a0b213e4, type: 3}
       propertyPath: m_Name
       value: Chicken
@@ -124082,6 +124106,14 @@ PrefabInstance:
     - target: {fileID: 4587914942548418174, guid: d07a238fc14760d419b2de58a0b213e4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634005750094714935, guid: d07a238fc14760d419b2de58a0b213e4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634005750094714935, guid: d07a238fc14760d419b2de58a0b213e4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -397451263
       objectReference: {fileID: 0}
     - target: {fileID: 7430120370022836899, guid: d07a238fc14760d419b2de58a0b213e4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -124793,6 +124825,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4169474203217871334, guid: 9c51e95ae3dfe5641bafa546e8d54d32, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169474203217871334, guid: 9c51e95ae3dfe5641bafa546e8d54d32, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -397451263
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882054624539684457, guid: 9c51e95ae3dfe5641bafa546e8d54d32, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882054624539684457, guid: 9c51e95ae3dfe5641bafa546e8d54d32, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -124895,6 +124943,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4002631457492879835, guid: 08f9d1ac303e792489ba4b2e4096bcbc, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4134489986944502562, guid: 08f9d1ac303e792489ba4b2e4096bcbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.4917
