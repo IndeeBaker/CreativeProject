@@ -177,7 +177,7 @@ MonoBehaviour:
     plantPrefab: {fileID: 0}
   - id: 18
     itemName: Chicken
-    icon: {fileID: -8714301849626275311, guid: eab3363c20a29c8489fd6333958cd8e0, type: 3}
+    icon: {fileID: -2718919651984597301, guid: 1bb38a816bc5c354aabcf8b67a3d12de, type: 3}
     price: 250
     maxStack: 99
     itemType: 9
