@@ -26,11 +26,19 @@ public class ItemDatabase : ScriptableObject
         public string itemName;
         public Sprite icon;
         public int price;
-        public int maxStack;
+        public int maxStack = 1;
         public ItemType itemType;
 
-        [Tooltip("Prefab to instantiate when planting this seed")]
-        public GameObject plantPrefab;  // <-- Added prefab reference
+        [Header("Inventory Settings")]
+        [Tooltip("If true, this item is added to the inventory when bought.")]
+        public bool goesToInventory = true;
+
+        [Header("Prefab Settings")]
+        [Tooltip("Prefab to instantiate when buying this item, if it doesn't go to inventory.")]
+        public GameObject spawnPrefab;
+
+        [Tooltip("Prefab to instantiate when planting this seed (optional, used for farming).")]
+        public GameObject plantPrefab;
     }
 
     public List<ItemData> items = new List<ItemData>();

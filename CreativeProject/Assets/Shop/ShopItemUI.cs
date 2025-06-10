@@ -49,12 +49,18 @@ public class ShopItemUI : MonoBehaviour
         buyInProgress = true;
         StartCoroutine(ResetBuyFlag());
 
-        if (itemData == null)
-            return;
+        if (itemData == null) return;
 
         int price = itemData.price;
 
-        if (PlayerWallet.Instance.TrySpendMoney(price))
+        if (!PlayerWallet.Instance.TrySpendMoney(price))
+        {
+            Debug.LogWarning("Not enough money to buy this item.");
+            return;
+        }
+
+        // If the item goes to inventory
+        if (itemData.goesToInventory)
         {
             bool added = InventorySystem.Instance.AddItem(itemData.id, 1);
             if (added)
@@ -69,7 +75,29 @@ public class ShopItemUI : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Not enough money to buy this item.");
+            // Spawn the prefab near the player
+            if (itemData.spawnPrefab != null)
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                {
+                    Vector3 spawnOffset = new Vector3(2f, 0, 2f); // adjust as needed
+                    Vector3 spawnPosition = player.transform.position + spawnOffset;
+
+                    Instantiate(itemData.spawnPrefab, spawnPosition, Quaternion.identity);
+                    Debug.Log($"Spawned {itemData.itemName} at {spawnPosition}");
+                }
+                else
+                {
+                    Debug.LogWarning("Player not found. Make sure your player has the tag 'Player'.");
+                    PlayerWallet.Instance.AddMoney(price); // refund if spawn fails
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"No spawn prefab assigned for {itemData.itemName}.");
+                PlayerWallet.Instance.AddMoney(price); // refund if nothing to spawn
+            }
         }
     }
 

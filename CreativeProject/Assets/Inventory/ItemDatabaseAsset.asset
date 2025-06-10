@@ -19,6 +19,8 @@ MonoBehaviour:
     price: 1
     maxStack: 99
     itemType: 1
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 1
     itemName: Axe
@@ -26,6 +28,8 @@ MonoBehaviour:
     price: 1
     maxStack: 99
     itemType: 2
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 2
     itemName: Hoe
@@ -33,6 +37,8 @@ MonoBehaviour:
     price: 1
     maxStack: 99
     itemType: 3
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 3
     itemName: Watering Can
@@ -40,6 +46,8 @@ MonoBehaviour:
     price: 1
     maxStack: 99
     itemType: 4
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 4
     itemName: Wheat Seeds
@@ -47,6 +55,8 @@ MonoBehaviour:
     price: 10
     maxStack: 99
     itemType: 5
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 5
     itemName: Carrot Seeds
@@ -54,6 +64,8 @@ MonoBehaviour:
     price: 20
     maxStack: 99
     itemType: 5
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 2006292023922799161, guid: acf3559663e78dc42afcf6916d46f945, type: 3}
   - id: 6
     itemName: Flower Seed
@@ -61,6 +73,8 @@ MonoBehaviour:
     price: 30
     maxStack: 99
     itemType: 5
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 226591568302949880, guid: 5f5950fdf5c34ac4ebb911fb9465148c, type: 3}
   - id: 7
     itemName: Wool
@@ -68,6 +82,8 @@ MonoBehaviour:
     price: 50
     maxStack: 99
     itemType: 10
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 8
     itemName: Milk
@@ -75,6 +91,8 @@ MonoBehaviour:
     price: 50
     maxStack: 99
     itemType: 10
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 9
     itemName: Egg
@@ -82,6 +100,8 @@ MonoBehaviour:
     price: 30
     maxStack: 99
     itemType: 6
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 10
     itemName: Dinosaur Egg
@@ -89,6 +109,8 @@ MonoBehaviour:
     price: 100
     maxStack: 99
     itemType: 10
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 11
     itemName: Wheat
@@ -96,6 +118,8 @@ MonoBehaviour:
     price: 20
     maxStack: 99
     itemType: 6
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 12
     itemName: Carrots
@@ -103,6 +127,8 @@ MonoBehaviour:
     price: 40
     maxStack: 99
     itemType: 10
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 13
     itemName: Flowers
@@ -110,6 +136,8 @@ MonoBehaviour:
     price: 60
     maxStack: 99
     itemType: 10
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 8250808540343018084, guid: 5f5950fdf5c34ac4ebb911fb9465148c, type: 3}
   - id: 14
     itemName: Wood
@@ -117,6 +145,8 @@ MonoBehaviour:
     price: 5
     maxStack: 99
     itemType: 10
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 15
     itemName: Stone
@@ -124,6 +154,8 @@ MonoBehaviour:
     price: 5
     maxStack: 99
     itemType: 10
+    goesToInventory: 1
+    spawnPrefab: {fileID: 0}
     plantPrefab: {fileID: 0}
   - id: 16
     itemName: Cow
@@ -131,6 +163,8 @@ MonoBehaviour:
     price: 10
     maxStack: 99
     itemType: 9
+    goesToInventory: 0
+    spawnPrefab: {fileID: 4814894881221297334, guid: b8530a9b540f0cc4abd28edb4e8f0ad0, type: 3}
     plantPrefab: {fileID: 0}
   - id: 17
     itemName: Sheep
@@ -138,18 +172,24 @@ MonoBehaviour:
     price: 10
     maxStack: 99
     itemType: 9
+    goesToInventory: 0
+    spawnPrefab: {fileID: 7099628745791734969, guid: 08f9d1ac303e792489ba4b2e4096bcbc, type: 3}
     plantPrefab: {fileID: 0}
   - id: 18
     itemName: Chicken
     icon: {fileID: -8714301849626275311, guid: eab3363c20a29c8489fd6333958cd8e0, type: 3}
     price: 10
     maxStack: 99
-    itemType: 0
+    itemType: 9
+    goesToInventory: 0
+    spawnPrefab: {fileID: 4587914942548418174, guid: d07a238fc14760d419b2de58a0b213e4, type: 3}
     plantPrefab: {fileID: 0}
   - id: 19
     itemName: Dinosaur
     icon: {fileID: -8261122725574191275, guid: 10e042ab3628a4e47b94816314b81499, type: 3}
     price: 20
     maxStack: 99
-    itemType: 0
+    itemType: 9
+    goesToInventory: 0
+    spawnPrefab: {fileID: 2116125066954959652, guid: 9c51e95ae3dfe5641bafa546e8d54d32, type: 3}
     plantPrefab: {fileID: 0}
