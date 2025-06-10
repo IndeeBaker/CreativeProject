@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -3179454569167166134}
   - component: {fileID: 4002631457492879835}
   - component: {fileID: -2343060919331741048}
+  - component: {fileID: 3117839884925809717}
   m_Layer: 0
   m_Name: Sheep
   m_TagString: Untagged
@@ -32,7 +33,8 @@ Transform:
   m_LocalPosition: {x: 4.4917, y: -1.9789, z: 0}
   m_LocalScale: {x: 7.7804923, y: 7.367991, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8567221248313255593}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &178631459082651879
@@ -178,3 +180,49 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.21, y: 0.14}
   m_EdgeRadius: 0
+--- !u!114 &3117839884925809717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7099628745791734969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8eab5aa332a7c4597d813e638940be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItemPrefab: {fileID: 818021353951967370, guid: 298b521ff52acca44ba64696c575b722, type: 3}
+  dropPoint: {fileID: 8567221248313255593}
+  dropIntervalDays: 2
+--- !u!1 &8334057071257509803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8567221248313255593}
+  m_Layer: 0
+  m_Name: DropPointSheep
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8567221248313255593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8334057071257509803}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4134489986944502562}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
