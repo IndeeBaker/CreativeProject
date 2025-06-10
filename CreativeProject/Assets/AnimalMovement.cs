@@ -19,8 +19,14 @@ public class AnimalMovement : MonoBehaviour
 
     private void Start()
     {
+        Collider2D playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
+        Collider2D animalCollider = GetComponent<Collider2D>();
+
+        Physics2D.IgnoreCollision(playerCollider, animalCollider);
+
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(MoveRoutine());
+
     }
 
     private IEnumerator MoveRoutine()
@@ -34,12 +40,12 @@ public class AnimalMovement : MonoBehaviour
             // Move for moveDuration
             while (elapsed < moveDuration)
             {
-                rb.velocity = direction * moveSpeed;
+                rb.linearVelocity = direction * moveSpeed;
                 elapsed += Time.deltaTime;
                 yield return null;
             }
 
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
 
             // Wait idle for a bit
             yield return new WaitForSeconds(idleDuration);
