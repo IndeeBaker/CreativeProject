@@ -1,3 +1,4 @@
+//This code was built using AI for assistance
 using UnityEngine;
 
 public class Bed : MonoBehaviour
