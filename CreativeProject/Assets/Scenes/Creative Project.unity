@@ -986,6 +986,10 @@ MonoBehaviour:
   flowerPlantPrefab: {fileID: 8250808540343018084, guid: 5f5950fdf5c34ac4ebb911fb9465148c, type: 3}
   carrotPlantPrefab: {fileID: 6527539994138021484}
   wheatPlantPrefab: {fileID: 516693414}
+  pickupRange: 2
+  pickupLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &91766497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 913695881009679124, guid: c477a2c83b617a340a0640f85dfa4b95, type: 3}
